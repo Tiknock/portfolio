@@ -1,0 +1,132 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "A propos",
+    "skills": "Compétences",
+    "achievements": "Projets",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "A mon propos",
+    "presentation": {
+      "1":"Spécialisée dans le domaine de l'",
+      "2":"Education",
+      "3":" et de la ",
+      "4":"Formation",
+      "5":", j'ai développé de nombreuses ",
+      "6":"qualités humaines",
+      "7":" telles que l'écoute, la compréhension et l'empathie. Porteuse de ",
+      "8":"valeurs",
+      "9":" qui me sont chères, j'ai à cœur d'honorer des projets qui auront du sens pour vous comme pour moi.",
+      "10":" Passionnée",
+      "11":" par le développement web, j'ai pu développer des compétences et des connaissances en autodidacte ainsi que suivre la formation Open Classrooms en vue d'obtenir le titre RNCP 36076 « Développeur intégrateur web » de niveau 5 (Bac +2). J'ai ainsi pu m'initier à la ",
+      "12":"gestion de projet",
+      "13":", à la ",
+      "14":"création de site web",
+      "15":" (côté front-end et back-end), à l'",
+      "16":"optimisation",
+      "17":" et au ",
+      "18":"référencement",
+      "19":". J'ai ainsi  développé mes capacités à être",
+      "20":" autonome",
+      "21":", ",
+      "22":"curieuse",
+      "23":" et ",
+      "24":"structurée."
+    },
+    "cv":"Mon CV"
+  },
+  "skills":{
+    "title":"Compétences",
+    "list":{
+      "hard":"Savoir-faire",
+      "soft":"Savoir-être"
+    },
+    "detail":{
+      "htmlcss":{
+        "content":{
+          "1": "Intégrer du contenu conformément à une maquette avec HTML et CSS",
+          "2": "Implémenter une interface responsive avec HTML et CSS"
+        }
+      },
+      "sass":{
+        "content":{
+          "1":"Création de variables et de mixins",
+          "2": "Gestion des medias queries"
+        }
+      },
+      "js":{
+        "content":{
+          "1":"Récupérer les données utilisateurs dans le JavaScript via des formulaires",
+          "2":"Manipuler les éléments du DOM avec JavaScript",
+          "3":"Gérer les événements utilisateurs avec JavaScript"
+        }
+      },
+      "react":{
+        "content":{
+          "1":"Configurer la navigation entre les pages de l'application avec React Router",
+          "2":"Initialiser une application avec Create React App",
+          "3":"Développer des éléments de l'interface d'un site web grâce à des composants React"
+        }
+      },
+      "node":{
+        "content":{
+          "1":"Implémenter un modèle logique de données conformément à la réglementation",
+          "2":"Mettre en œuvre des opérations CRUD de manière sécurisée"
+        }
+      },
+      "mongodb":{
+        "content":{
+          "1":"Stocker des données de manière sécurisée"
+        }
+      },
+      "seo":{
+        "content":{
+          "1":"Optimiser les performances d’un site web",
+          "2":"Utiliser Schema.org, Google Ad et les balises meta"
+        }
+      },
+      "github":{
+        "content":{
+          "1":"Poster et récupérer un repository afin de pouvoir travailler en équipe",
+          "2":"Utiliser Github Page pour héberger un site web"
+        }
+      },
+      "console":{
+        "title":"Console de débuggage",
+        "content":"Débugger un site web grâce aux Chrome DevTools"
+      },
+      "empathie":{
+        "title":"Empathie",
+        "content":""
+      },
+      "equipe":{
+        "title":"Esprit d'équipe",
+        "content":""
+      },
+      "pedagogie":{
+        "title":"Pédagogie",
+        "content":""
+      },
+      "autonomie":{
+        "title":"Autonomie",
+        "content":""
+      },
+      "adaptation":{
+        "title":"Adaptation",
+        "content":""
+      },
+      "gestion":{
+        "title":"Gestion de projet",
+        "content":{
+          "1":"Suivre le déroulement du projet grâce à un outil de gestion de projet",
+          "2":"Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
+          "3":"Découper une fonctionnalités en tâches pour préparer le développement",
+          "4":"Présenter la solution technique",
+          "5":"Mettre en place une méthode de veille technologique",
+          "6":"Versionner son projet avec Git et Github"
+        }
+      }
+    }
+  }
+}

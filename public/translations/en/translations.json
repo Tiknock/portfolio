@@ -1,0 +1,132 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "achievements": "Achievements",
+        "contact": "Contact"
+    },
+    "about": {
+        "title": "About me",
+        "presentation": {
+            "1":"Specialized in the field of ",
+            "2":"Education",
+            "3":" and ",
+            "4":"Training",
+            "5":",  I have developed many ",
+            "6":"human qualities",
+            "7":" such as listening, understanding and empathy. A bearer of ",
+            "8":"values",
+            "9":" that are dear to me, I am committed to honoring projects that will make sense for you and for me.",
+            "10":" Passionate",
+            "11":" about web development, I was able to develop self-taught skills and knowledge as well as follow the Open Classrooms training in order to obtain the title RNCP 36076 ''Web Integrator Developer'' level 5 (Bac +2). I was able to learn about ",
+            "12":"project management",
+            "13":", ",
+            "14":"website creation",
+            "15":" (front-end and back-end side), ",
+            "16":"optimization",
+            "17":" and ",
+            "18":"SEO",
+            "19":". I thus developed my capacities to be ",
+            "20":" autonomous",
+            "21":", ",
+            "22":"curious",
+            "23":" and ",
+            "24":"structured."
+          },
+          "cv":"My CV"
+    },
+    "skills":{
+        "title":"Skills",
+        "list":{
+          "hard":"Hard skills",
+          "soft":"Soft skills"
+        },
+        "detail":{
+          "htmlcss":{
+            "content":{
+              "1": "Integrate content according to a model with HTML and CSS",
+              "2": "Implement a responsive interface with HTML and CSS"
+            }
+          },
+          "sass":{
+            "content":{
+              "1":"Creating variables and mixins",
+              "2": "Media queries management"
+            }
+          },
+          "js":{
+            "content":{
+              "1":"Retrieve user data in JavaScript via forms",
+              "2":"Manipulate DOM elements with JavaScript",
+              "3":"Handling user events with JavaScript"
+            }
+          },
+          "react":{
+            "content":{
+              "1":"Configure app page navigation with React Router",
+              "2":"Initialize an app with Create React App",
+              "3":"Develop website interface elements using React components"
+            }
+          },
+          "node":{
+            "content":{
+              "1":"Implement a logical data model in accordance with regulations",
+              "2":"Implement CRUD operations securely"
+            }
+          },
+          "mongodb":{
+            "content":{
+              "1":"Store data securely"
+            }
+          },
+          "seo":{
+            "content":{
+              "1":"Optimize website performance",
+              "2":"Use Schema.org, Google Ad and meta tags"
+            }
+          },
+          "github":{
+            "content":{
+              "1":"Post and retrieve a repository in order to be able to work as a team",
+              "2":"Use Github Page to host a website"
+            }
+          },
+          "console":{
+            "title":"Debug Console",
+            "content":"Debug a website with Chrome DevTools"
+          },
+          "empathie":{
+            "title":"Empathy",
+            "content":""
+          },
+          "equipe":{
+            "title":"Team spirit",
+            "content":""
+          },
+          "pedagogie":{
+            "title":"Pedagogy",
+            "content":""
+          },
+          "autonomie":{
+            "title":"Autonomy",
+            "content":""
+          },
+          "adaptation":{
+            "title":"Adaptation",
+            "content":""
+          },
+          "gestion":{
+            "title":"Project management",
+            "content":{
+              "1":"Follow the progress of the project thanks to a project management tool",
+              "2":"Write the technical specifications of a web project based on functional needs",
+              "3":"Divide a feature into tasks to prepare for development",
+              "4":"Present the technical solution",
+              "5":"Set up a technology watch method",
+              "6":"Version your project with Git and Github"
+            }
+          }
+        }
+      }
+}

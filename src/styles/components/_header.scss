@@ -1,0 +1,123 @@
+header {
+    height: 100vh;
+    margin: auto;
+}
+nav {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.432);
+    backdrop-filter: blur(2px);
+    position:fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 5px 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-1;
+
+  .nav-bar{
+      display: flex;  
+      width: 35%;
+      min-width: 230px;
+      font-size: 1rem;
+      justify-content: space-between;
+        
+      a {
+          color: $color-2;
+      }
+      a:hover {
+        color: $color-1!important;
+
+      }
+      .language-selector {
+        background: transparent;
+        border: none;
+        color: $color-1;
+        outline: none;
+        option {
+          border: none;
+          color: $color-1;
+        }
+      }
+  }
+}
+.nav-active {
+    position: relative;
+    color: $color-1!important;
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 0;
+      background: $color-1;
+      position: absolute;
+      border-radius: 10px;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-animation: anim 0.3s ease forwards;
+      animation: anim 0.6s ease forwards;
+
+      @-webkit-keyframes anim {
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes anim {
+        to {
+          width: 100%;
+        }
+      }
+    }
+}
+.presentation-section {
+  @include nonante;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  
+  .presentation-container {
+      display: flex;
+      margin: auto;
+
+      .presentation-left-box {
+          margin: auto auto auto 40px;
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+              font-size: 62px;
+              width: 63%;
+          }
+
+          .line-header{
+              height: 2px;
+              width: 20%;
+              background: $color-1;
+              margin: 20px 0;
+          }
+
+          ul {
+              font-size: 30px;
+          }
+
+        }
+      }
+
+    .btn-contact {
+    //     background: $color-1;
+    //     color: $color-3;
+    //     padding: 12px 27px;
+    //     border: 1px solid $color-1;
+        margin: 0px auto auto 180px;
+
+    //     &:hover {
+    //       background: none;
+    //       color: $color-1;
+    //       transition: ease-in-out 0.2s;
+    //   }
+    }
+}

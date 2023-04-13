@@ -1,0 +1,44 @@
+footer {
+    width: 100%;
+    background: $color-2;
+    color: $color-3;
+    padding: 20px 0;
+
+    i {
+        margin-right: 10px;
+    }
+    
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    .footer-container{
+        @include nonante;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+    }
+
+    .footer-left{
+
+        ul {
+            display: flex;
+            gap: 10px;
+        }
+
+    }
+    .footer-middle{
+        .middle-box{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         
+        }
+    }
+    .footer-right{
+        p {
+            margin: 10px auto;
+            color: #ffffff5c;
+        }
+    }
+}
