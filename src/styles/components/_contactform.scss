@@ -47,12 +47,13 @@
     }
     textarea {
       resize: none;
-      padding: 6px 0;
+      padding: 10px 6px;
       height: 200px;
     }
-    input.button {
+    .btn {
       margin: 40px auto auto;
     }
+
   }
   .form-message {
     p {

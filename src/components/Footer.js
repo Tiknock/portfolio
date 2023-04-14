@@ -1,29 +1,36 @@
 import React from "react";
-import Logo from "./Logo";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("en", { useSuspense: false });
+
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-left">
-          <span>
-            <Logo />
-          </span>
-          <h4>Lolita Danancher</h4>
-          <p>Développeuse Web, création de site internet,...</p>
+          <div className="footer-title">
+            <span>
+              <img
+                src="./icon.png"
+                width="50px"
+                alt="Logo de Lolita Danancher"
+              />
+            </span>
+            <h4>Lolita Danancher</h4>
+          </div>
+          <p>{t("footer.1")}</p>
           <ul>
             <li>
-              <a href="#home">Accueil</a>
+              <a href="#home">{t("footer.2")}</a>
             </li>
             <li>
               <a href="#achievements">Portfolio</a>
             </li>
-            <li>Mentions légales</li>
-            <li>Plan du site</li>
+            <li>{t("footer.3")}</li>
           </ul>
         </div>
         <div className="footer-middle">
-          <h4>Mes coordonnées</h4>
+          <h4>{t("footer.4")}</h4>
           <div className="middle-box">
             <p>
               <i class="fa-solid fa-location-dot"></i>Rhône-Alpes & PACA
@@ -37,9 +44,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-right">
-          <h4>Mentions</h4>
-          <p>Site créé avec</p>
-          <p>2023 Copyright | Lolita Danancher tous droits réservés</p>
+          <h4>{t("footer.5")}</h4>
+          <p>
+            {t("footer.6")}
+            <span className="react">
+              React<i class="fa-brands fa-react"></i>
+            </span>
+          </p>
+          <p>{t("footer.7")}</p>
         </div>
       </div>
     </footer>

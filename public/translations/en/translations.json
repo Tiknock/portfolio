@@ -1,11 +1,22 @@
 {
-    "header": {
-        "home": "Home",
-        "about": "About",
-        "skills": "Skills",
-        "achievements": "Achievements",
-        "contact": "Contact"
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "achievements": "Achievements",
+      "contact": "Contact"
     },
+    "presentation":{
+      "1":"A",
+      "2":"passionate",
+      "3": "web developer",
+      "4":"Creation of website.",
+      "5":"Improving your online image.",
+      "6":"Together let's grow your business!",
+      "btn":"Contact Me"
+    }
+  },
     "about": {
         "title": "About me",
         "presentation": {
@@ -72,7 +83,8 @@
           "node":{
             "content":{
               "1":"Implement a logical data model in accordance with regulations",
-              "2":"Implement CRUD operations securely"
+              "2":"Implement CRUD operations securely",
+              "3":"Use Express.js to create a robust and scalable API efficiently"
             }
           },
           "mongodb":{
@@ -91,10 +103,6 @@
               "1":"Post and retrieve a repository in order to be able to work as a team",
               "2":"Use Github Page to host a website"
             }
-          },
-          "console":{
-            "title":"Debug Console",
-            "content":"Debug a website with Chrome DevTools"
           },
           "empathie":{
             "title":"Empathy",
@@ -128,5 +136,19 @@
             }
           }
         }
+      },
+      "achievements":"Achievements",
+      "contact": {
+        "name": "Name",
+        "sen": "Send"
+      },
+      "footer":{
+        "1":"Web developer, creation of website,...",
+        "2":"Home",
+        "3":"Legal Notice",
+        "4":"Details contact",
+        "5":"Mentions",
+        "6":"Website created with ",
+        "7":"2023 Copyright | Lolita Danancher all rights reserved"
       }
 }

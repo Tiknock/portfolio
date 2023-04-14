@@ -1,10 +1,21 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 init(process.env.ID);
 
 const ContactForm = () => {
+  const { t, i18n } = useTranslation("en", { useSuspense: false });
+
+  const handleValue = () => {
+    if (i18n.language === "fr") {
+      return "Envoyer";
+    } else if (i18n.language === "en") {
+      return "Send";
+    }
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -52,9 +63,9 @@ const ContactForm = () => {
         </a>
       </div>
       <form ref={form} onSubmit={sendEmail} className="form-content">
-        <label>Name</label>
+        <label for="name">{t("contact.name")}</label>
         <input type="text" name="name" required autoComplete="off" id="name" />
-        <label>Email</label>
+        <label for="email">Email</label>
         <input
           type="email"
           name="email"
@@ -62,9 +73,9 @@ const ContactForm = () => {
           autoComplete="off"
           id="email"
         />
-        <label>Message</label>
+        <label for="mess">Message</label>
         <textarea name="message" id="mess" />
-        <input type="submit" value="Send" className="btn button" />
+        <input type="submit" value={handleValue()} className="btn button" />
       </form>
       <div className="form-message"></div>
     </section>

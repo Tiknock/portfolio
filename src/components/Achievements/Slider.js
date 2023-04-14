@@ -8,14 +8,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useTranslation } from "react-i18next";
 
 const Slider = ({ projects }) => {
+  const { i18n } = useTranslation("en", { useSuspense: false });
+
   console.log(projects);
   return (
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
+      spaceBetween={100}
       slidesPerView={2}
       navigation
       pagination={{ clickable: true }}
@@ -32,7 +35,11 @@ const Slider = ({ projects }) => {
             ))}
           </ul>
           <img src={project.img} alt="Blabla" />
-          <p>{project.description}</p>
+          {i18n.language === "fr" ? (
+            <p>{project.descriptionFr}</p>
+          ) : (
+            <p>{project.descriptionEn}</p>
+          )}
         </SwiperSlide>
       ))}
     </Swiper>

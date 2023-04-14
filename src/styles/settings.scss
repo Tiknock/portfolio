@@ -63,10 +63,11 @@ $color-3: #fff;
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
-  }
-  .btn:hover{
+  
+    &:hover{
     background:none;
     color:$color-1;
+    }
   }
   .btn:before,.btn:after{
     content:'';
@@ -75,7 +76,7 @@ $color-3: #fff;
     right:0;
     height:2px;
     width:0;
-    background: $color-1;
+    background: $color-1 !important;
     transition:400ms ease all;
   }
   .btn:after{

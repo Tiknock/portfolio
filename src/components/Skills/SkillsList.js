@@ -122,14 +122,6 @@ const SkillsList = () => {
               >
                 Github
               </li>
-              <li
-                onClick={(e) => {
-                  setSkillSelected("Console de débuggage");
-                  activeSkill(e);
-                }}
-              >
-                {t("skills.detail.console.title")}
-              </li>
             </ul>
           ) : (
             <ul className="soft">

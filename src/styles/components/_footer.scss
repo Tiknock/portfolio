@@ -4,6 +4,14 @@ footer {
     color: $color-3;
     padding: 20px 0;
 
+    a{
+        text-decoration: none;
+        color: $color-3;
+    
+        &:hover{
+            color: $color-1;
+        }
+    }
     i {
         margin-right: 10px;
     }
@@ -20,10 +28,19 @@ footer {
     }
 
     .footer-left{
+        .footer-title{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        h4{margin-bottom: 0;}
+        p{
+            margin-bottom: 10px;
+        }
 
         ul {
             display: flex;
-            gap: 10px;
+            justify-content: space-between;        
         }
 
     }
@@ -38,7 +55,16 @@ footer {
     .footer-right{
         p {
             margin: 10px auto;
-            color: #ffffff5c;
+            color: #7e7e7ee3;
+        }
+        .react {
+            color:$color-3;
+            font-size: 1rem;
+
+            i {
+                color: #09D9FE;
+                margin-left: 5px;
+            }
         }
     }
 }

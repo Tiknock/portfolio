@@ -85,15 +85,6 @@ const SkillDetails = ({ type }) => {
       content5 = "";
       content6 = "";
       break;
-    case "Console de débuggage":
-      title = t("skills.detail.console.title");
-      content1 = t("skills.detail.console.content");
-      content2 = "";
-      content3 = "";
-      content4 = "";
-      content5 = "";
-      content6 = "";
-      break;
     case "Empathie":
       title = t("skills.detail.empathie.title");
       content1 = t("skills.detail.js.content");

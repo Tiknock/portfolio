@@ -1,10 +1,21 @@
 {
   "header": {
-    "home": "Accueil",
-    "about": "A propos",
-    "skills": "Compétences",
-    "achievements": "Projets",
-    "contact": "Contact"
+    "nav": {
+      "home": "Accueil",
+      "about": "A propos",
+      "skills": "Compétences",
+      "achievements": "Projets",
+      "contact": "Contact"
+    },
+    "presentation":{
+      "1":"Une",
+      "2":"développeuse web",
+      "3": "passionnée",
+      "4":"Création de site internet.",
+      "5":"Améliorer votre image en ligne.",
+      "6":"Ensemble, développons votre entreprise !",
+      "btn":"Me contacter"
+    }
   },
   "about": {
     "title": "A mon propos",
@@ -72,7 +83,8 @@
       "node":{
         "content":{
           "1":"Implémenter un modèle logique de données conformément à la réglementation",
-          "2":"Mettre en œuvre des opérations CRUD de manière sécurisée"
+          "2":"Mettre en œuvre des opérations CRUD de manière sécurisée",
+          "3":"Utiliser Express.js pour créer une API robuste et évolutive da manière efficiente."
         }
       },
       "mongodb":{
@@ -91,10 +103,6 @@
           "1":"Poster et récupérer un repository afin de pouvoir travailler en équipe",
           "2":"Utiliser Github Page pour héberger un site web"
         }
-      },
-      "console":{
-        "title":"Console de débuggage",
-        "content":"Débugger un site web grâce aux Chrome DevTools"
       },
       "empathie":{
         "title":"Empathie",
@@ -128,5 +136,19 @@
         }
       }
     }
+  },
+  "achievements":"Projets",
+  "contact": {
+    "name": "Nom",
+    "send": "Envoyer"
+  },
+  "footer":{
+    "1":"Développeuse Web, création de site internet,...",
+    "2":"Accueil",
+    "3":"Mentions légales",
+    "4":"Mes coordonnées",
+    "5":"Mentions",
+    "6":"Site créé avec ",
+    "7":"2023 Copyright | Lolita Danancher tous droits réservés"
   }
 }
