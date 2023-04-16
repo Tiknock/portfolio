@@ -11,12 +11,24 @@ nav {
     align-items: center;
     color: $color-1;
 
+    @media screen and (max-width: $mobile) {
+      padding: 0;
+    }
   .nav-bar{
       display: flex;  
       width: 35%;
       min-width: 500px;
       font-size: 1rem;
       justify-content: space-between;
+      @media screen and (max-width: $tablet) {
+        min-width: 0;
+        width: auto;      
+      }
+      @media screen and (max-width: $medium) {
+        font-size: 0.8rem;   
+        width: 70%;
+        max-width: 350px;
+      }
         
       a {
           color: $color-2;
@@ -64,6 +76,9 @@ nav {
           width: 100%;
         }
       }
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
     }
 }
 .presentation-section {
@@ -75,20 +90,54 @@ nav {
   height: 100%;
   margin: auto;
   align-items: center;
-  
+  @media screen and (max-width: $tablet) {
+    width: 100%;  
+  }
   .presentation-container {
-      display: flex;
-      margin: auto;
+    display: flex;
+    margin: auto;
+    @media screen and (max-width: $tablet) {
+      margin: auto auto 20px;
+    }
+    @media screen and (max-width: $medium) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: $mobile) {
+      margin: auto;    
+    }
 
       .presentation-left-box {
-          // width: 65%;
-          margin: auto 0 auto 40px;
+          overflow: hidden;
+          width: 65%;
+          margin: auto 20px auto 40px;
           display: flex;
           flex-direction: column;
+          @media screen and (max-width: $tablet) {
+            width: 45%;        
+          }
+          @media screen and (max-width: $medium) {
+            width: 90%;
+          }
+          @media screen and (max-width: $mobile) {
+            margin: auto;
+          }
 
           h1 {
-              font-size: 62px;
-              width: 63%;
+              font-size: 4rem;
+              width: 67%;
+              min-width: 600px;
+              @media screen and (max-width: $tablet) {
+                font-size: 3rem;
+                min-width: 0;
+                width: 40%;
+              }
+              @media screen and (max-width: $medium) {
+                width: 90%;
+              }
+              @media screen and (max-width: $mobile) {
+                font-size: 2rem;
+              }
+              
           }
 
           .line-header{
@@ -99,19 +148,187 @@ nav {
           }
 
           ul {
-              font-size: 30px;
+            font-size: 1.85rem;
+              @media screen and (max-width: $tablet) {
+                font-size: 1.5rem;
+              }
+              @media screen and (max-width: $mobile) {
+                font-size: 1rem;
+              }
+              
+              li{
+                margin: 5px auto;
+              }
+            }
+            
           }
-
-        }
       }
       .fr-red, .en-red {
         color: $color-1;
       }
     .btn-contact {
         margin: 0px auto auto 180px;
+        @media screen and (max-width: $mobile) {
+          font-size: 0.8rem;
+        }
     }
     .presentation-right-box{
       width: 40%;
       display: flex;
+      margin-right: 50px;
+      @media screen and (max-width: $tablet) {
+        margin-right: 0px;      
+      }
+      @media screen and (max-width: $medium) {
+        display: none;      
+      }
     }
+}
+
+
+
+
+@media screen and (max-width: $mobile) {
+  .container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+  
+  .navbar .menu-items {
+    display: flex;
+    background: $color-1;
+  }
+  
+  .navbar .nav-container li {
+    list-style: none;
+  }
+  
+  .navbar .nav-container a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    color: $color-3;
+  }
+  
+  .navbar .nav-container a:hover{
+      font-weight: bolder;
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+  .nav-active {
+    color: $color-2!important;
+    font-weight: bold!important;
+  }
 }

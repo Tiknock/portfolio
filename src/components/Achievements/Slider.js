@@ -12,6 +12,13 @@ import { useTranslation } from "react-i18next";
 
 const Slider = ({ projects }) => {
   const { i18n } = useTranslation("en", { useSuspense: false });
+  const setSlidesPerview = () => {
+    if (window.innerWidth <= 1000) {
+      return 1;
+    } else {
+      return 2;
+    }
+  };
 
   console.log(projects);
   return (
@@ -19,7 +26,7 @@ const Slider = ({ projects }) => {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={100}
-      slidesPerView={2}
+      slidesPerView={setSlidesPerview()}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}

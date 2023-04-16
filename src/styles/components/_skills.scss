@@ -22,6 +22,9 @@
                 margin: 20px;
                 display: flex;
                 justify-content: space-around;
+                @media screen and (max-width: $medium) {
+                    font-size: 1rem;
+                  }
 
                 li{
                     padding: 10px;
@@ -35,6 +38,9 @@
             }
             .skills-list-box {
                 text-align: center;
+                @media screen and (max-width: $medium) {
+                    font-size: 0.9rem;
+                  }
 
                 li {
                     padding: 5px;
@@ -71,10 +77,16 @@
 
                 p{
                     margin: 10px;
+                    @media screen and (max-width: $medium) {
+                        margin: 5px;       
+                    }
                 }
                 i {
                     margin-right: 5px;
                     color: #127605;
+                }
+                @media screen and (max-width: $medium) {
+                    font-size:0.85rem;         
                 }
             }
         }

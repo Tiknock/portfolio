@@ -8,13 +8,17 @@
     h2 {
         color: $color-3;
     }
-
+    
     .swiper {
         padding: 0 100px;
         color: aliceblue;
         width: 90%;
         min-height: 70vh;
         text-align: center;
+        @media screen and (max-width: $medium) {
+            padding: auto;    
+            width: 100%;  
+        }
         
         h3 {
             color: $color-1;
@@ -27,6 +31,11 @@
             justify-content: center;
             gap: 20px;
             margin: 10px;
+            @media screen and (max-width: $mobile) {
+                font-size: 0.85rem; 
+                flex-wrap: wrap;
+                gap: 5px;
+            }
             
             li {
                 background: #ffffff5c;
@@ -35,7 +44,28 @@
             }
         }
         img{
-            width: 100%;
+            height: 30vh;
+            margin: 30px auto;
+            border-radius: 10px;
+            @media screen and (max-width: $medium) {
+                margin: 30px auto;  
+                height: 25vh;     
+            }
+            @media screen and (max-width: $mobile) {
+               height: 10vh;  
+               margin: 10px auto;
+            }
+        }
+        p {
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: #ffffff5c;
+            font-size: 0.9rem;
+            line-height: 20px;
+            @media screen and (max-width: $mobile) {
+                font-size: 0.8rem;    
+                padding: 5px 10px;
+            }
         }
         
     }

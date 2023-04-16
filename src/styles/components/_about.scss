@@ -15,11 +15,20 @@
         @include nonante;
         display: flex;
         margin: auto;
-        justify-content: space-around;        
-        
+        justify-content: space-around;   
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;   
+          } 
         .presentation-pic {
             width: 40%;
             text-align: center;
+            @media screen and (max-width: $medium) {
+                width: 20%;   
+              }
+              @media screen and (max-width: $mobile) {
+                width: 40%; 
+                margin: auto;             
+            }
 
             img {
                 // background: rgba(63, 63, 63, 0.21);
@@ -27,6 +36,10 @@
                 border-radius: 5px;
                 box-shadow: 2px 5px 10px 0px #2222221f;
                 transition: ease-in-out 0.2s;
+                @media screen and (max-width: $tablet) {
+                    width: 90%;   
+                    margin: 25px auto auto;   
+                  }
                 
                 &:hover {
                     transform: scale(1.005);
@@ -44,6 +57,10 @@
             line-height: 1.7rem;
             width: 40%;
             color: $color-3;
+            @media screen and (max-width: $mobile) {
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+              }
             
             p {
                 // background: rgba(63, 63, 63, 0.21);
@@ -55,7 +72,15 @@
             }
 
             .cv-btn {
-                margin: 80px auto auto;
+                margin: auto auto 20px;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 60%;              
+            }
+            @media screen and (max-width: $mobile) {
+                width: 90%;
+                margin: auto;              
             }
         }
     }

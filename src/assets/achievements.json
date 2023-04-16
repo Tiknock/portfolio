@@ -2,95 +2,104 @@
     {
         "id":1,
         "title":"La Montagne",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/montagneT.png",
         "technos":[
             "HTML",
             "SASS"
         ],
         "descriptionFr": "Projet réalisé dans le cadre de la formation FromScratch. L'objectif était de reproduire une maquette en version Dekstop et mobile afin d'avoir une page vitrine responsive.",
-        "descriptionEn": "PROJECT openclassrooms"
+        "descriptionEn": "Project carried out as part of the FromScratch training. The objective was to reproduce a model in Dekstop and mobile version in order to have a responsive showcase page."
     },
     {
         "id":2,
         "title":"Le Resto",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/restoT.png",
         "technos":[
             "HTML",
             "SASS"
         ],
-        "descriptionFr": "Projet réalisé dans le cadre de la formation FromScratch. L'objectif était de reproduire une maquette en version Dekstop et mobile afin d'avoir une page vitrine responsive."
+        "descriptionFr": "Projet réalisé dans le cadre de la formation FromScratch. L'objectif était de reproduire une maquette en version Dekstop et mobile afin d'avoir une page vitrine responsive.",
+        "descriptionEn": "Project carried out as part of the FromScratch training. The objective was to reproduce a model in Dekstop and mobile version in order to have a responsive showcase page."
     },
     {
         "id":3,
         "title":"Sophie Bluel",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/sophie-bluel.jpg",
         "technos":[
+            "CSS",
             "Javascript"
         ],
-        "descriptionFr": "Projet OpenClassrooms afin de gérer l'appel d'une API et de créer une modale à plusieurs vues pour ajouter et supprimer des travaux."
+        "descriptionFr": "Projet OpenClassrooms nécessitant de faire appel à une API afin de se connecter et de pouvoir ajouter et supprimer des travaux dans une modale à plusieurs vues.",
+        "descriptionEn": "OpenClassrooms project that requires using an API in order to connect and be able to add and remove work in a multi-view modal (MVC)."
     },
     {
         "id":4,
         "title":"Kasa",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/kasaT.png",
         "technos":[
             "SASS",
             "React"
         ],
-        "descriptionFr": "Projet openclassrooms nécessitant la prise en main de React afin de récupérer des informations se référant à des logements via une base de données et les retourner sur un site responsive dont la maquette était fournie."
+        "descriptionFr": "Projet OpenClassrooms requérant la prise en main de React afin de récupérer des informations sur des logements via une base de données et les retourner sur un site responsive dont la maquette était fournie.",
+        "descriptionEn": "OpenClassrooms project requiring the handling of React in order to retrieve information on accommodation via a database and return it to a responsive site whose model was provided."
     },
     {
         "id":5,
         "title":"Crypto-Watch",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/cryptowatchT.png",
         "technos":[
             "React",
             "Redux"
         ],
-        "descriptionFr": "Projet effectué durant l'un des cours de FromScratch permettant de découvrir de nombreuses fonctionnalités de React ainsi que Redux pour avoir un rendu plus dynamique."
+        "descriptionFr": "Projet effectué durant l'un des cours de FromScratch permettant de découvrir de nombreuses fonctionnalités de React, des appels à plusieurs API, ainsi que Redux dans le but d'avoir un rendu plus dynamique et personnalisé pour l'utilisateur.",
+        "descriptionEn": "Project carried out during one of the FromScratch courses allowing to discover many features of React, calls to several APIs, as well as Redux in order to have a more dynamic and personalized rendering for the user."
     },
     {
         "id":6,
         "title":"Mon Vieux Grimoire",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/mvgT.png",
         "technos":[
             "NodeJs",
             "Express",
             "MongoDB"
         ],
-        "descriptionFr": "Projet OpenClassrooms focalisé sur le back-end. L'objectif était de créer une base de données en NoSQL ainsi qu'une API pouvant communiquer avec celle-ci."
+        "descriptionFr": "Projet OpenClassrooms focalisé sur le back-end. L'objectif était de créer une base de données en NoSQL ainsi qu'une API pouvant communiquer avec celle-ci afin de permettre à des utilisateurs de poster des avis sur des livres. Il était nécessaire de générer deux collections : une pour les utilisateurs et l'autre pour les livres.",
+        "descriptionEn": "OpenClassrooms project focused on the back-end. The objective was to create a database in NoSQL and an API in order to allow users to post reviews on books. It was necessary to generate two collections: one for users and one for books."
     },
     {
         "id":7,
         "title":"Playlist",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/playlistT.png",
         "technos":[
             "HTML",
             "CSS",
             "Javascript"
         ],
-        "descriptionFr": "Projet personnel pour effectuer un lecteur de musiques personnalisé."
+        "descriptionFr": "Projet personnel pour effectuer un lecteur de musiques personnalisé basé sur une base de données locale.",
+        "descriptionEn": "Personal project to make a personalized music player based on a local database."
     },
     {
         "id":8,
         "title":"Jokes",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/jokesT.png",
         "technos":[
             "HTML",
             "CSS",
             "Javascript"
         ],
-        "descriptionFr": "Projet de FromScratch pour apprendre à faire appel à une API de blagues via Javascript."
+        "descriptionFr": "Projet de FromScratch qui permet de générer des blagues via l'appel d'une API en Javascript.",
+        "descriptionEn": "FromScratch project that generates jokes by calling an API in JavaScript."
     },
     {
         "id":9,
         "title":"Jeu de bulles",
-        "img":"http://localhost:3000/images/nina-carducci1.png",
+        "img":"http://localhost:3000/images/bubble.jpg",
         "technos":[
             "HTML",
             "Css",
             "Javascript"
         ],
-        "descriptionFr": "Projet de FromScratch en Javascript pour créer un petit jeu où l'utilisateur doit exploser les bulles qui apparaissent aléatoirement."
+        "descriptionFr": "Projet de FromScratch en Javascript d'un petit jeu où l'utilisateur doit exploser les bulles qui apparaissent aléatoirement sur son écran dans un temps imparti.",
+        "descriptionEn": "Project of the FromScratch training in Javascript of a small game where the user must explode the bubbles that appear randomly on his screen in a given time."
     }
 ]

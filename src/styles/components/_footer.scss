@@ -18,6 +18,9 @@ footer {
     
     h4 {
         margin-bottom: 15px;
+         @media screen and (max-width: $mobile) {
+            margin-bottom: 5px;     
+        }
     }
 
     .footer-container{
@@ -25,6 +28,15 @@ footer {
         display: flex;
         justify-content: space-between;
         font-size: 0.8rem;
+        @media screen and (max-width: $medium) {
+            font-size:0.65rem;  
+            width: 98%;        
+        }
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+            gap: 30px;   
+            text-align: center;
+          }
     }
 
     .footer-left{
@@ -32,30 +44,57 @@ footer {
             display: flex;
             align-items: center;
             margin-bottom: 5px;
+            @media screen and (max-width: $mobile) {
+                display: block;
+                text-align: center;     
+            }
         }
         h4{margin-bottom: 0;}
         p{
             margin-bottom: 10px;
+            @media screen and (max-width: $mobile) {
+                margin-bottom: 5px;  
+            }
         }
 
         ul {
             display: flex;
-            justify-content: space-between;        
+            justify-content: space-between;   
+            @media screen and (max-width: $medium) {
+                font-size:0.65rem;  
+                justify-content: left;
+                gap: 20px;      
+            }     
+            @media screen and (max-width: $mobile) {
+                justify-content: center;
+              }
         }
-
+        @media screen and (max-width: $mobile) {
+            width: 90%;
+            margin: auto;
+          }
     }
     .footer-middle{
         .middle-box{
             display: flex;
             flex-direction: column;
             gap: 10px;
-         
+            @media screen and (max-width: $mobile) {
+                gap: 5px;     
+            }
         }
+        @media screen and (max-width: $mobile) {
+            width: 90%;
+            margin: auto;
+          }
     }
     .footer-right{
         p {
             margin: 10px auto;
             color: #7e7e7ee3;
+            @media screen and (max-width: $mobile) {
+                margin: 5px auto;     
+            }
         }
         .react {
             color:$color-3;
@@ -66,5 +105,12 @@ footer {
                 margin-left: 5px;
             }
         }
+        @media screen and (max-width: $medium) {
+            width: 25%;        
+        }
+        @media screen and (max-width: $mobile) {
+            width: 90%;
+            margin: auto;
+          }
     }
 }
