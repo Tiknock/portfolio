@@ -35,7 +35,7 @@ const NavBar = () => {
       </a>
       <li>
         <select className="language-selector" onChange={handleLangChange}>
-          <option value="en" selected>
+          <option value="en" defaultValue>
             EN
           </option>
           <option value="fr">FR</option>

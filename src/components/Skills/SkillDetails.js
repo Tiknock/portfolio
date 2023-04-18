@@ -87,7 +87,7 @@ const SkillDetails = ({ type }) => {
       break;
     case "Empathie":
       title = t("skills.detail.empathie.title");
-      content1 = t("skills.detail.js.content");
+      content1 = t("skills.detail.empathie.content");
       content2 = "";
       content3 = "";
       content4 = "";

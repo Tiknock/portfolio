@@ -106,23 +106,23 @@
           },
           "empathie":{
             "title":"Empathy",
-            "content":""
+            "content":"Through my personality, the interpersonal relationships that I have developed as well as the readings that I have done, I have revealed a strong empathy that allows me to communicate with my interlocutor in a benevolent way in order to seek to better understand him."
           },
           "equipe":{
             "title":"Team spirit",
-            "content":""
+            "content":"With experience in catering, more particularly as a team leader in fast food, I learned to develop group cohesion in order to deal with stressful situations."
           },
           "pedagogie":{
             "title":"Pedagogy",
-            "content":""
+            "content":"Graduated with a Master's degree in Education and Training Sciences, I was able to develop my knowledge and skills in pedagogy and andragogy and was able to use them during courses that I taught at the University."
           },
           "autonomie":{
             "title":"Autonomy",
-            "content":""
+            "content":"Beyond my professional experiences, during my studies, I was able to learn how to structure myself, set goals and achieve them independently."
           },
           "adaptation":{
             "title":"Adaptation",
-            "content":""
+            "content":"As evidenced by my CV, I am a person who can touch on many areas and I know how to adapt to people as well as to the professional demands that are made to me. I also learned to search on my own when my skills and knowledge reached their limit."
           },
           "gestion":{
             "title":"Project management",
@@ -150,5 +150,6 @@
         "5":"Mentions",
         "6":"Website created with ",
         "7":"2023 Copyright | Lolita Danancher all rights reserved"
-      }
+      },
+      "404":"This page does not exist..."
 }

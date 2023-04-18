@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer-title">
             <span>
               <img
-                src="./icon.png"
+                src="./icon.webp"
                 width="50px"
                 alt="Logo de Lolita Danancher"
               />
@@ -33,13 +33,14 @@ const Footer = () => {
           <h4>{t("footer.4")}</h4>
           <div className="middle-box">
             <p>
-              <i class="fa-solid fa-location-dot"></i>Rhône-Alpes & PACA
+              <i className="fa-solid fa-location-dot"></i>Rhône-Alpes & PACA
             </p>
             <p>
-              <i class="fa-sharp fa-solid fa-phone"></i>06 81 17 71 09
+              <i className="fa-sharp fa-solid fa-phone"></i>06 81 17 71 09
             </p>
             <p>
-              <i class="fa-solid fa-envelope"></i>lolita.danancher@wanadoo.fr
+              <i className="fa-solid fa-envelope"></i>
+              lolita.danancher@wanadoo.fr
             </p>
           </div>
         </div>
@@ -48,7 +49,7 @@ const Footer = () => {
           <p>
             {t("footer.6")}
             <span className="react">
-              React<i class="fa-brands fa-react"></i>
+              React<i className="fa-brands fa-react"></i>
             </span>
           </p>
           <p>{t("footer.7")}</p>

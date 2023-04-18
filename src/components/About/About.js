@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Pdp from "../../assets/img/Lolita_Danancher1.jpg";
+import Pdp from "../../assets/img/Lolita_Danancher1.webp";
 import Presentation from "./Presentation";
 
 const About = () => {

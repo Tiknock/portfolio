@@ -2,7 +2,7 @@
     {
         "id":1,
         "title":"La Montagne",
-        "img":"http://localhost:3000/images/montagneT.png",
+        "img":"http://localhost:3000/images/montagneT.webp",
         "technos":[
             "HTML",
             "SASS"
@@ -13,7 +13,7 @@
     {
         "id":2,
         "title":"Le Resto",
-        "img":"http://localhost:3000/images/restoT.png",
+        "img":"http://localhost:3000/images/restoT.webp",
         "technos":[
             "HTML",
             "SASS"
@@ -24,7 +24,7 @@
     {
         "id":3,
         "title":"Sophie Bluel",
-        "img":"http://localhost:3000/images/sophie-bluel.jpg",
+        "img":"http://localhost:3000/images/sophie-bluel.webp",
         "technos":[
             "CSS",
             "Javascript"
@@ -35,7 +35,7 @@
     {
         "id":4,
         "title":"Kasa",
-        "img":"http://localhost:3000/images/kasaT.png",
+        "img":"http://localhost:3000/images/kasaT.webp",
         "technos":[
             "SASS",
             "React"
@@ -46,7 +46,7 @@
     {
         "id":5,
         "title":"Crypto-Watch",
-        "img":"http://localhost:3000/images/cryptowatchT.png",
+        "img":"http://localhost:3000/images/cryptowatchT.webp",
         "technos":[
             "React",
             "Redux"
@@ -57,7 +57,7 @@
     {
         "id":6,
         "title":"Mon Vieux Grimoire",
-        "img":"http://localhost:3000/images/mvgT.png",
+        "img":"http://localhost:3000/images/mvgT.webp",
         "technos":[
             "NodeJs",
             "Express",
@@ -69,7 +69,7 @@
     {
         "id":7,
         "title":"Playlist",
-        "img":"http://localhost:3000/images/playlistT.png",
+        "img":"http://localhost:3000/images/playlistT.webp",
         "technos":[
             "HTML",
             "CSS",
@@ -81,7 +81,7 @@
     {
         "id":8,
         "title":"Jokes",
-        "img":"http://localhost:3000/images/jokesT.png",
+        "img":"http://localhost:3000/images/jokesT.webp",
         "technos":[
             "HTML",
             "CSS",
@@ -93,7 +93,7 @@
     {
         "id":9,
         "title":"Jeu de bulles",
-        "img":"http://localhost:3000/images/bubble.jpg",
+        "img":"http://localhost:3000/images/bubble.webp",
         "technos":[
             "HTML",
             "Css",

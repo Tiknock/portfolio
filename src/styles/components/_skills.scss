@@ -12,10 +12,15 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;   
+        }
 
         .skills-list{
             width: 40%;
-            
+            @media screen and (max-width: $mobile) {
+                width: 90%;
+            }
 
             .type-btn{
                 font-size: 1.2rem;
@@ -25,6 +30,9 @@
                 @media screen and (max-width: $medium) {
                     font-size: 1rem;
                   }
+                @media screen and (max-width: $mobile) {
+                    margin: 0 0 20px;
+                }
 
                 li{
                     padding: 10px;
@@ -41,11 +49,17 @@
                 @media screen and (max-width: $medium) {
                     font-size: 0.9rem;
                   }
+                  @media screen and (max-width: $medium) {
+                    margin-bottom: 30px;
+                  }
 
                 li {
                     padding: 5px;
                     margin: 10px;
                     cursor: pointer;
+                    @media screen and (max-width: $mobile) {
+                        margin: 5px;
+                      }
                 }
 
                 .active-skill{
@@ -58,9 +72,12 @@
             height: 50%;
             width: 50%;
             border: 5px solid rgba(85, 85, 85, 0.579);
-            background: linear-gradient(rgba(206, 206, 206, 0.673), rgba(205, 205, 205, 0.705)), url('../../assets/img/work4.jpg') center/cover;
+            background: linear-gradient(rgba(206, 206, 206, 0.673), rgba(205, 205, 205, 0.705)), url('../../assets/img/work4.webp') center/cover;
             border-radius: 5px;
             padding: 20px;
+            @media screen and (max-width: $mobile) {
+                width: 90%;
+              }
 
             h3{
                 text-shadow: -1px 0 $color-1, 0 1px $color-1, 1px 0 $color-1, 0 -1px $color-1;
@@ -68,6 +85,10 @@
                 margin: 20px auto 50px;
                 font-size: 2rem;
                 color: $color-3;
+                @media screen and (max-width: $mobile) {
+                    font-size: 1.5rem;
+                    margin: 5px auto 10px;
+                  }
             }
             .details-content{
                 display: flex;
@@ -76,7 +97,9 @@
                 color: $color-2;
 
                 p{
+                    text-align: justify;
                     margin: 10px;
+                    line-height: 25px;
                     @media screen and (max-width: $medium) {
                         margin: 5px;       
                     }

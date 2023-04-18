@@ -38,10 +38,10 @@ const Slider = ({ projects }) => {
           <h3>{project.title}</h3>
           <ul>
             {project.technos.map((techno) => (
-              <li>{techno}</li>
+              <li key={techno}>{techno}</li>
             ))}
           </ul>
-          <img src={project.img} alt="Blabla" />
+          <img src={project.img} alt={project.title} />
           {i18n.language === "fr" ? (
             <p>{project.descriptionFr}</p>
           ) : (

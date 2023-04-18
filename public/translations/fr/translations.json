@@ -106,23 +106,23 @@
       },
       "empathie":{
         "title":"Empathie",
-        "content":""
+        "content":"De par ma personnalité, des relations interpersonnelles que j'ai pu développer ainsi que des lectures que j'ai pu effectuer, j'ai révélé une forte empathie qui me permet de communiquer avec mon interlocuteur de manière bienveillante afin de chercher à mieux le comprendre."
       },
       "equipe":{
         "title":"Esprit d'équipe",
-        "content":""
+        "content":"Forte d'expériences en restauration, plus particulièrement en tant que cheffe d'équipe en restauration rapide, j'ai appris à développer une cohésion de groupe afin de faire face à des situations stressantes."
       },
       "pedagogie":{
         "title":"Pédagogie",
-        "content":""
+        "content":"Titulaire d'un Master en Sciences de l'Education et de la Formation, j'ai pu développer mes connaissances et compétences en pédagogie et andragogie et ai pu m'en servir lors de TD que j'ai dispensés à l'Université."
       },
       "autonomie":{
         "title":"Autonomie",
-        "content":""
+        "content":"Au-delà de mes expériences professionnelles, j'ai, au cours de mes études, j'ai pu apprendre à me structurer, à me fixer des objectifs et les atteindre de manière autonome."
       },
       "adaptation":{
         "title":"Adaptation",
-        "content":""
+        "content":"Comme en témoigne mon CV, je suis une personne qui peut toucher à de nombreux domaines et je sais m'adapter aux personnes ainsi qu'aux demandes professionnelles qui me sont formulées. J'ai aussi appris à chercher par moi-même lorsque mes compétences et connaissances ont atteint leur limite. "
       },
       "gestion":{
         "title":"Gestion de projet",
@@ -150,5 +150,6 @@
     "5":"Mentions",
     "6":"Site créé avec ",
     "7":"2023 Copyright | Lolita Danancher tous droits réservés"
-  }
+  },
+  "404":"Cette page n'existe pas..."
 }

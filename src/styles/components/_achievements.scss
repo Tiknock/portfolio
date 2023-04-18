@@ -1,6 +1,6 @@
 #achievements {
     display: flex;
-    background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(10, 10, 10, 1)), url('../../assets/img/work.jpg') center/cover;
+    background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(10, 10, 10, 1)), url('../../assets/img/work.webp') center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,12 @@
         @media screen and (max-width: $medium) {
             padding: auto;    
             width: 100%;  
+        }
+        @media screen and (max-width: $mobile) {
+            justify-content: space-between;
+            height: 70vh;
+            margin: auto;
+            padding: 50px;
         }
         
         h3 {
@@ -64,7 +70,7 @@
             line-height: 20px;
             @media screen and (max-width: $mobile) {
                 font-size: 0.8rem;    
-                padding: 5px 10px;
+                text-align: justify;
             }
         }
         

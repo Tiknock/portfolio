@@ -63,9 +63,9 @@ const ContactForm = () => {
         </a>
       </div>
       <form ref={form} onSubmit={sendEmail} className="form-content">
-        <label for="name">{t("contact.name")}</label>
+        <label htmlFor="name">{t("contact.name")}</label>
         <input type="text" name="name" required autoComplete="off" id="name" />
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
@@ -73,7 +73,7 @@ const ContactForm = () => {
           autoComplete="off"
           id="email"
         />
-        <label for="mess">Message</label>
+        <label htmlFor="mess">Message</label>
         <textarea name="message" id="mess" />
         <input type="submit" value={handleValue()} className="btn button" />
       </form>

@@ -99,6 +99,9 @@ footer {
         .react {
             color:$color-3;
             font-size: 1rem;
+            @media screen and (max-width: $mobile) {
+                font-size: 0.8rem;
+              }
 
             i {
                 color: #09D9FE;

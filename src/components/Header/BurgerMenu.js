@@ -3,9 +3,10 @@ import NavBar from "./NavBar";
 
 const BurgerMenu = () => {
   return (
-    <div>
-      <input class="checkbox" type="checkbox" name="" id="" />
-      <div class="hamburger-lines">
+    <div className="burgerMenu">
+      <label id="bgmenulabel" htmlFor="bgmenu"></label>
+      <input className="checkbox" type="checkbox" name="" id="bgmenu" />
+      <div className="hamburger-lines">
         <span className="line line1"></span>
         <span className="line line2"></span>
         <span className="line line3"></span>
