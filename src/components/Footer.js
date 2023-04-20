@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import Modale from "./Modale";
 
 const Footer = () => {
   const { t } = useTranslation("en", { useSuspense: false });
@@ -26,7 +28,7 @@ const Footer = () => {
             <li>
               <a href="#achievements">Portfolio</a>
             </li>
-            <li>{t("footer.3")}</li>
+            <Modale />
           </ul>
         </div>
         <div className="footer-middle">
@@ -35,13 +37,29 @@ const Footer = () => {
             <p>
               <i className="fa-solid fa-location-dot"></i>Rhône-Alpes & PACA
             </p>
-            <p>
-              <i className="fa-sharp fa-solid fa-phone"></i>06 81 17 71 09
-            </p>
-            <p>
-              <i className="fa-solid fa-envelope"></i>
-              lolita.danancher@wanadoo.fr
-            </p>
+            <CopyToClipboard text="0681177109" className="hover">
+              <p
+                style={{ cursor: "pointer" }}
+                className="clipboard"
+                onClick={() => alert("Téléphone copié !")}
+              >
+                <i className="fa-sharp fa-solid fa-phone"></i>
+                06 81 17 71 09
+              </p>
+            </CopyToClipboard>
+            <CopyToClipboard
+              text="lolita.danancher@wanadoo.fr"
+              className="hover"
+            >
+              <p
+                style={{ cursor: "pointer" }}
+                className="clipboard"
+                onClick={() => alert("Email copié !")}
+              >
+                <i className="fa-solid fa-envelope"></i>
+                lolita.danancher@wanadoo.fr
+              </p>
+            </CopyToClipboard>
           </div>
         </div>
         <div className="footer-right">

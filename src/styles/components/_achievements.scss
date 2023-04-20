@@ -21,7 +21,7 @@
         }
         @media screen and (max-width: $mobile) {
             justify-content: space-between;
-            height: 70vh;
+            height: 100%;
             margin: auto;
             padding: 50px;
         }
@@ -64,13 +64,13 @@
         }
         p {
             padding: 10px 20px;
-            border-radius: 10px;
+            border-radius: 5px;
             background: #ffffff5c;
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 20px;
             @media screen and (max-width: $mobile) {
-                font-size: 0.8rem;    
                 text-align: justify;
+                font-size: 0.8rem;    
             }
         }
         

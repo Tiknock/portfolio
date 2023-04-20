@@ -6,10 +6,10 @@ const NotFound = () => {
   const { t } = useTranslation("en", { useSuspense: false });
 
   return (
-    <div className="404-page">
+    <div className="page-404">
       <Layout>
-        <div className="404-container">
-          <h1>404</h1>
+        <div className="container-404">
+          <h2>404</h2>
           <p>{t("404")}</p>
         </div>
       </Layout>

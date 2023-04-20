@@ -24,7 +24,7 @@
 
             .type-btn{
                 font-size: 1.2rem;
-                margin: 20px;
+                margin: 0 20px 20px;
                 display: flex;
                 justify-content: space-around;
                 @media screen and (max-width: $medium) {
@@ -54,9 +54,30 @@
                   }
 
                 li {
+                    position: relative;
                     padding: 5px;
-                    margin: 10px;
+                    margin: 30px;
                     cursor: pointer;
+
+                    img{
+                        transform: translateY(-10%);
+                        position: absolute;
+                        margin-left: 5px;
+                        @media screen and (max-width: $mobile) {
+                            width: 20px;
+                          }
+                        }
+                        .css-icon{
+                            margin-left: 35px;
+                            transform: translateY(-11%);
+                            @media screen and (max-width: $mobile) {
+                                width: 18.2px;
+                                margin-left: 30px;
+                              }
+                    }
+                    @media screen and (max-width: $medium) {
+                        margin: 15px;
+                      }
                     @media screen and (max-width: $mobile) {
                         margin: 5px;
                       }

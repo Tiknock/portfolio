@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SkillDetails from "./SkillDetails";
+import html from "../../assets/img/html.png";
+import css from "../../assets/img/css.png";
+import sass from "../../assets/img/sass.png";
+import js from "../../assets/img/js.png";
+import node from "../../assets/img/node.png";
+import mongodb from "../../assets/img/mongodb.png";
+import github from "../../assets/img/github.png";
+import react from "../../assets/img/react.png";
 
 const SkillsList = () => {
   const [typeOfSkills, setTypeOfSkills] = useState("hard");
@@ -12,7 +20,11 @@ const SkillsList = () => {
     document.querySelectorAll(".skills-list-box > ul > li").forEach((btn) => {
       btn.className = "";
     });
-    e.target.className = "active-skill";
+    if (e.target.tagName.toLowerCase() !== "img") {
+      e.target.className = "active-skill";
+    } else if (e.target.tagName.toLowerCase() === "img") {
+      e.target.parentNode.className = "active-skill";
+    }
     console.log(e);
   };
   return (
@@ -65,6 +77,13 @@ const SkillsList = () => {
                 }}
               >
                 HTML/CSS
+                <img src={html} alt="HTML logo" width="25px" />
+                <img
+                  src={css}
+                  className="css-icon"
+                  alt="CSS logo"
+                  width="22.5px"
+                />
               </li>
               <li
                 onClick={(e) => {
@@ -73,6 +92,7 @@ const SkillsList = () => {
                 }}
               >
                 SASS
+                <img src={sass} alt="SASS logo" width="25px" />
               </li>
               <li
                 onClick={(e) => {
@@ -81,6 +101,7 @@ const SkillsList = () => {
                 }}
               >
                 Javascript
+                <img src={js} alt="Js logo" width="25px" />
               </li>
               <li
                 onClick={(e) => {
@@ -89,6 +110,7 @@ const SkillsList = () => {
                 }}
               >
                 React
+                <img src={react} alt="React logo" width="25px" />
               </li>
               <li
                 onClick={(e) => {
@@ -97,6 +119,7 @@ const SkillsList = () => {
                 }}
               >
                 NodeJs
+                <img src={node} alt="NodeJs logo" width="25px" />
               </li>
               <li
                 onClick={(e) => {
@@ -105,6 +128,7 @@ const SkillsList = () => {
                 }}
               >
                 MongoDB
+                <img src={mongodb} alt="Mongodb logo" width="25px" />
               </li>
               <li
                 onClick={(e) => {
@@ -121,6 +145,7 @@ const SkillsList = () => {
                 }}
               >
                 Github
+                <img src={github} alt="Github logo" width="25px" />
               </li>
             </ul>
           ) : (

@@ -37,6 +37,15 @@
     height: 50vmin;
     width: 50vmin;
     margin: auto;
+    @media screen and (max-width: $tablet) {
+        height: 40vmin;
+        width: 40vmin;
+    }
+    @media screen and (max-width: $medium) {
+        height: 25vmin;
+        width: 25vmin;
+        margin: auto auto auto 0;
+    }
     
     > .item {
         position: absolute;

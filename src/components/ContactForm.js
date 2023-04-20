@@ -75,7 +75,9 @@ const ContactForm = () => {
         />
         <label htmlFor="mess">Message</label>
         <textarea name="message" id="mess" />
-        <input type="submit" value={handleValue()} className="btn button" />
+        <button type="submit" className="btn button">
+          {handleValue()}
+        </button>
       </form>
       <div className="form-message"></div>
     </section>

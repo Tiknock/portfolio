@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo";
 import BurgerMenu from "./BurgerMenu";
 import NavBar from "./NavBar";
 
 const Nav = () => {
+  const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsWindowSmall(window.innerWidth < 700);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <header id="home" className="navbar">
       <nav>
@@ -14,7 +27,7 @@ const Nav = () => {
           </div>
         </NavLink>
         <div className="container nav-container">
-          {window.innerWidth <= 500 ? <BurgerMenu /> : <NavBar />}
+          {isWindowSmall ? <BurgerMenu /> : <NavBar />}
         </div>
       </nav>
     </header>

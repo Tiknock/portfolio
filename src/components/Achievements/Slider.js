@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,14 +12,26 @@ import { useTranslation } from "react-i18next";
 
 const Slider = ({ projects }) => {
   const { i18n } = useTranslation("en", { useSuspense: false });
+  const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsWindowSmall(window.innerWidth < 1000);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const setSlidesPerview = () => {
-    if (window.innerWidth <= 1000) {
+    if (isWindowSmall) {
       return 1;
     } else {
       return 2;
     }
   };
-
   console.log(projects);
   return (
     <Swiper

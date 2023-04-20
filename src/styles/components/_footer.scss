@@ -68,6 +68,10 @@ footer {
             @media screen and (max-width: $mobile) {
                 justify-content: center;
               }
+              .modale-btn:hover{
+                cursor: pointer;
+                color:$color-1;
+              }
         }
         @media screen and (max-width: $mobile) {
             width: 90%;
@@ -81,6 +85,9 @@ footer {
             gap: 10px;
             @media screen and (max-width: $mobile) {
                 gap: 5px;     
+            }
+            .hover:hover{
+                color: $color-1!important;
             }
         }
         @media screen and (max-width: $mobile) {
@@ -115,5 +122,28 @@ footer {
             width: 90%;
             margin: auto;
           }
+    }
+}
+
+.modale-container{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+    line-height: 23px;
+
+    button{
+        position: absolute;
+        top:0;
+        right:0;
+        border: none;
+    }
+    i{
+        font-size: 20px;
+        color: $color-1;
+        cursor: pointer;
+    }
+    h3{
+        margin: 20px auto 5px;
     }
 }

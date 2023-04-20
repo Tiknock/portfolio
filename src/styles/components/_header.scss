@@ -27,22 +27,24 @@ nav {
       }
       @media screen and (max-width: $medium) {
         font-size: 0.8rem;   
-        width: 70%;
-        max-width: 350px;
       }
         
       a {
           color: $color-2;
       }
-      a:hover {
-        color: $color-1!important;
-
+      @media screen and (min-width: 700px) {
+        a:hover {
+          color: $color-1!important;
+        }
       }
       .language-selector {
         background: transparent;
         border: none;
         color: $color-1;
         outline: none;
+        @media screen and (max-width: $mobile) {
+          color:$color-3!important;
+        }
         option {
           border: none;
           color: $color-1;
@@ -53,7 +55,7 @@ nav {
 .nav-active {
     position: relative;
     color: $color-1!important;
-
+  
     &::after {
       content: "";
       height: 2px;
@@ -100,9 +102,6 @@ nav {
     @media screen and (max-width: $tablet) {
       margin: auto auto 20px;
     }
-    @media screen and (max-width: $medium) {
-      flex-direction: column;
-    }
     @media screen and (max-width: $mobile) {
       margin: auto;    
     }
@@ -117,7 +116,7 @@ nav {
             width: 45%;        
           }
           @media screen and (max-width: $medium) {
-            width: 90%;
+            width: 80%;
           }
           @media screen and (max-width: $mobile) {
             margin: auto;
@@ -130,7 +129,7 @@ nav {
               @media screen and (max-width: $tablet) {
                 font-size: 3rem;
                 min-width: 0;
-                width: 40%;
+                width: 100%;
               }
               @media screen and (max-width: $medium) {
                 width: 90%;
@@ -146,7 +145,18 @@ nav {
               width: 20%;
               background: $color-1;
               margin: 20px 0;
+              animation: line-trans 2s linear alternate;
+
           }
+          @keyframes line-trans{
+            0% {
+                width: 0;
+            }
+            
+            100% { 
+                width: 20%;
+            }
+        }
 
           ul {
             font-size: 1.85rem;
@@ -159,6 +169,9 @@ nav {
               
               li{
                 margin: 5px auto;
+                @media screen and (max-width: $mobile) {
+                  margin: 0;                
+                }
               }
             }
             
@@ -180,17 +193,21 @@ nav {
       @media screen and (max-width: $tablet) {
         margin-right: 0px;      
       }
-      @media screen and (max-width: $medium) {
-        display: none;      
+      @media screen and (max-width: 800px) {
+        display: none;    
       }
     }
 }
 
-@media screen and (max-width: $mobile) {
+
+@media screen and (max-width: 700px) {
   .burgerMenu,  .container {
     max-width: 1050px;
     width: 90%;
     margin: auto;
+    display: block;
+    position: relative;
+    height: 60px;
   }
   
   .navbar {
@@ -210,15 +227,9 @@ nav {
     background: $color-1;
   }
   
-  .navbar .nav-container li {
-    list-style: none;
-  }
-  
-  .navbar .nav-container a {
-    text-decoration: none;
+  .navbar .nav-container a, .language-selector {
     font-weight: 500;
     font-size: 1.2rem;
-    padding: 0.7rem;
     color: $color-3;
   }
   
@@ -295,6 +306,7 @@ nav {
   .navbar .menu-items li {
     margin-bottom: 1.2rem;
     font-size: 1.5rem;
+    padding: 0.7rem;
     font-weight: 500;
   }
   

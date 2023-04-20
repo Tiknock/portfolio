@@ -1,0 +1,22 @@
+.page-404{
+    min-height:100vh;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .nav-container {
+        display:none;
+    }
+    .container-404{
+        text-align: center;
+        color: $color-1;
+        
+        h2{
+            font-size: 8rem;
+            font-weight: bolder;
+            margin: 0;
+        }
+    }
+}
