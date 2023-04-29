@@ -25,8 +25,8 @@ nav {
         min-width: 0;
         width: auto;      
       }
-      @media screen and (max-width: $medium) {
-        font-size: 0.8rem;   
+      @media screen and (max-width: 800px) {
+        font-size: 0.9rem;   
       }
         
       a {

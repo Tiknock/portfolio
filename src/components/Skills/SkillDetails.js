@@ -143,6 +143,10 @@ const SkillDetails = ({ type }) => {
       return null;
   }
 
+  if (!content1) {
+    return null;
+  }
+
   return (
     <div className="skills-details-box">
       <h3>{title}</h3>

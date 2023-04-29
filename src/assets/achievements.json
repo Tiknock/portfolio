@@ -29,6 +29,7 @@
         "id":3,
         "title":"Sophie Bluel",
         "img":"http://localhost:3000/images/sophie-bluel.webp",
+        "video":"http://localhost:3000/video/sophiebluel.webm",
         "code":"https://github.com/Tiknock/SophieBluel",
         "technos":[
             "CSS",

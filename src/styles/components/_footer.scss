@@ -124,10 +124,11 @@ footer {
           }
     }
 }
-
+footer .modale-container {
+    width: 50%;
+}
 .modale-container{
     position: relative;
-    width: 50%;
     margin: auto;
     text-align: justify;
     line-height: 23px;

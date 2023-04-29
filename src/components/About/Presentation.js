@@ -33,8 +33,8 @@ const Presentation = () => {
       </p>
       <a
         className="btn cv-btn"
-        target="blank"
-        href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf"
+        target="_blank"
+        href="./DANANCHER_LOLITA_CV.pdf"
       >
         {t("about.cv")}
       </a>

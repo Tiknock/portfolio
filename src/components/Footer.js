@@ -7,7 +7,7 @@ const Footer = () => {
   const { t } = useTranslation("en", { useSuspense: false });
 
   return (
-    <footer>
+    <footer itemScope itemType="http://schema.org/Organization">
       <div className="footer-container">
         <div className="footer-left">
           <div className="footer-title">
@@ -18,7 +18,7 @@ const Footer = () => {
                 alt="Logo de Lolita Danancher"
               />
             </span>
-            <h4>Lolita Danancher</h4>
+            <h4 itemProp="name">Lolita Danancher</h4>
           </div>
           <p>{t("footer.1")}</p>
           <ul>
@@ -31,10 +31,15 @@ const Footer = () => {
             <Modale />
           </ul>
         </div>
-        <div className="footer-middle">
+        <div
+          className="footer-middle"
+          itemProp="address"
+          itemScope
+          itemType="http://schema.org/PostalAddress"
+        >
           <h4>{t("footer.4")}</h4>
           <div className="middle-box">
-            <p>
+            <p itemProp="addressLocality">
               <i className="fa-solid fa-location-dot"></i>Rhône-Alpes & PACA
             </p>
             <CopyToClipboard text="0681177109" className="hover">

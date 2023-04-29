@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useTranslation } from "react-i18next";
+import ModaleVideo from "./ModaleVideo";
 
 const Slider = ({ projects }) => {
   const { i18n } = useTranslation("en", { useSuspense: false });
@@ -53,7 +54,13 @@ const Slider = ({ projects }) => {
               <li key={techno}>{techno}</li>
             ))}
           </ul>
-          <img src={project.img} alt={project.title} />
+          {project.url ? (
+            <a href={project.url} target="_blank" rel="noreferrer">
+              <img src={project.img} alt={project.title} />
+            </a>
+          ) : (
+            <ModaleVideo project={project} />
+          )}
           {i18n.language === "fr" ? (
             <p>{project.descriptionFr}</p>
           ) : (
