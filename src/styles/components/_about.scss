@@ -10,6 +10,9 @@
     
     h2 {
         color: $color-3;
+        &::after{
+            background: $color-3;
+        }
     }
     .presentation-container {
         @include nonante;

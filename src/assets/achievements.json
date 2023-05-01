@@ -42,6 +42,7 @@
         "id":4,
         "title":"Kasa",
         "img":"http://localhost:3000/images/kasaT.webp",
+        "video":"http://localhost:3000/video/kasa.webm",
         "code":"https://github.com/Tiknock/kasa",
         "technos":[
             "SASS",
@@ -67,7 +68,8 @@
         "id":6,
         "title":"Mon Vieux Grimoire",
         "img":"http://localhost:3000/images/mvgT.webp",
-        "url":"https://github.com/Tiknock/mon-vieux-grimoire",
+        "video":"http://localhost:3000/video/mvg.webm",
+        "code":"https://github.com/Tiknock/mon-vieux-grimoire",
         "technos":[
             "NodeJs",
             "Express",

@@ -12,10 +12,12 @@ import { useTranslation } from "react-i18next";
 import ModaleVideo from "./ModaleVideo";
 
 const Slider = ({ projects }) => {
+  // carousel to display projects
   const { i18n } = useTranslation("en", { useSuspense: false });
   const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    // screen size management
     function handleResize() {
       setIsWindowSmall(window.innerWidth < 1000);
     }
@@ -48,7 +50,12 @@ const Slider = ({ projects }) => {
     >
       {projects.map((project) => (
         <SwiperSlide key={project.id}>
-          <h3>{project.title}</h3>
+          <h3>
+            {project.title}{" "}
+            <a href={project.code}>
+              <i className="fa-brands fa-github"></i>
+            </a>
+          </h3>
           <ul>
             {project.technos.map((techno) => (
               <li key={techno}>{techno}</li>

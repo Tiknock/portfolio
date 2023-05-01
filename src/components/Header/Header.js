@@ -3,8 +3,9 @@ import AnimHeader from "./AnimHeader";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  // use of useTranslation
   const { t, i18n } = useTranslation("en", { useSuspense: false });
-
+  // management of the selected language
   let classToApplyfr = "";
   if (i18n.language === "fr") {
     classToApplyfr = "fr-red";

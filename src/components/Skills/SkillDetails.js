@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 const SkillDetails = ({ type }) => {
   const { t } = useTranslation("en", { useSuspense: false });
 
+  // choice of content in the element according to the selected skill
   let title;
   let content1;
   let content2;

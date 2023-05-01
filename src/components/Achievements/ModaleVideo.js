@@ -13,6 +13,7 @@ const customStyles = {
 };
 
 const ModaleVideo = ({ project }) => {
+  // if the project has no url, a modal opens with a demo video of the site
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 

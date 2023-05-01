@@ -8,6 +8,7 @@ init(process.env.ID);
 const ContactForm = () => {
   const { t, i18n } = useTranslation("en", { useSuspense: false });
 
+  // language for "send" button
   const handleValue = () => {
     if (i18n.language === "fr") {
       return "Envoyer";
@@ -16,6 +17,7 @@ const ContactForm = () => {
     }
   };
 
+  // management of the contact form with EmailJs
   const form = useRef();
 
   const sendEmail = (e) => {

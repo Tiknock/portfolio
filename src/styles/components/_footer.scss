@@ -124,25 +124,40 @@ footer {
           }
     }
 }
-footer .modale-container {
-    width: 50%;
+#footer-modale-container {
+    width: 90%;
 }
 .modale-container{
     position: relative;
     margin: auto;
     text-align: justify;
     line-height: 23px;
-
-    button{
-        position: absolute;
-        top:0;
-        right:0;
-        border: none;
+    @media screen and (max-width: $mobile) {
+        font-size: 0.8rem;
+        line-height: 17px;
     }
-    i{
-        font-size: 20px;
-        color: $color-1;
-        cursor: pointer;
+    h2{
+        width: 100%;
+        &::after {
+            display: none;
+        }
+        @media screen and (max-width: $mobile) {
+               font-size: 1.2rem;
+              }
+            }
+            button{
+                position: absolute;
+                top:0;
+                right:0;
+                border: none;
+            }
+            i{
+                font-size: 20px;
+                color: $color-1;
+                cursor: pointer;
+                @media screen and (max-width: $mobile) {
+                       font-size: 15px;
+                      }
     }
     h3{
         margin: 20px auto 5px;

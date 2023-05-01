@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+// to copy the phone number and the email on click
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Modale from "./Modale";
 

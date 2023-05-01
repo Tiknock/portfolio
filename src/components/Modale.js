@@ -6,7 +6,7 @@ const customStyles = {
   content: {
     top: "50%",
     left: "50%",
-    right: "auto",
+    right: "20%",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
@@ -16,6 +16,7 @@ const customStyles = {
 const Modale = () => {
   const { t } = useTranslation("en", { useSuspense: false });
 
+  // modal for legal notices
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -44,7 +45,7 @@ const Modale = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="modale-container">
+        <div className="modale-container" id="footer-modale-container">
           <h2 ref={(_subtitle) => (subtitle = _subtitle)}>MENTIONS LÉGALES</h2>
           <button onClick={closeModal}>
             <i className="fa-regular fa-circle-xmark"></i>
@@ -62,7 +63,7 @@ const Modale = () => {
             Site »), est édité par :
           </p>
           <p>
-            Lolita Danancher, résidant 1 chemin de la creuse 42660 Le Bessat, de
+            Lolita Danancher, résidant 1 Chemin de la Creuse 42660 Le Bessat, de
             nationalité Française (France), née le 23/08/1995,
           </p>
           <h3>Hébergement</h3>

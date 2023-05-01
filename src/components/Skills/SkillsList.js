@@ -11,6 +11,7 @@ import github from "../../assets/img/github.png";
 import react from "../../assets/img/react.png";
 
 const SkillsList = () => {
+  // skill navigation management
   const [typeOfSkills, setTypeOfSkills] = useState("hard");
   const [skillSelected, setSkillSelected] = useState("");
 

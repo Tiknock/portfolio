@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const Presentation = () => {
   const { t } = useTranslation("en", { useSuspense: false });
+  // many calls to the translation file to manage the colors
   return (
     <div className="presentation-right-box">
       <p>

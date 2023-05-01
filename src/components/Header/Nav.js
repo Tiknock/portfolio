@@ -8,6 +8,7 @@ const Nav = () => {
   const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    // window size management for burger menu
     function handleResize() {
       setIsWindowSmall(window.innerWidth < 700);
     }
