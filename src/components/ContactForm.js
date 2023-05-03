@@ -1,12 +1,43 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollPlugin } from "gsap/ScrollToPlugin";
 
 init(process.env.ID);
 
 const ContactForm = () => {
   const { t, i18n } = useTranslation("en", { useSuspense: false });
+
+  const slideInTop = (elem, delay, duration) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: delay || 0.2,
+        duration: duration || 0.6,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top center",
+          end: "bottom center",
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideInTop("#contact > h2");
+  }, []);
 
   // language for "send" button
   const handleValue = () => {

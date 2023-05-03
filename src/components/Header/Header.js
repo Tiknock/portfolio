@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimHeader from "./AnimHeader";
 import { useTranslation } from "react-i18next";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollPlugin } from "gsap/ScrollToPlugin";
 
 const Header = () => {
   // use of useTranslation
@@ -15,6 +19,24 @@ const Header = () => {
     classToApplyen = "en-red";
   }
 
+  const displayIndic = () => {
+    gsap.timeline().fromTo(
+      ".indic > li",
+      {
+        opacity: 0,
+        x: -400,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.45,
+        duration: 0.7,
+      }
+    );
+  };
+  useEffect(() => {
+    displayIndic();
+  }, []);
   return (
     <section className="presentation-section">
       <div className="presentation-container">
@@ -25,7 +47,7 @@ const Header = () => {
             <span className={classToApplyfr}>{t("header.presentation.3")}</span>
           </h1>
           <span className="line-header"></span>
-          <ul>
+          <ul className="indic">
             <li>{t("header.presentation.4")}</li>
             <li>{t("header.presentation.5")}</li>
             <li>{t("header.presentation.6")}</li>
@@ -36,7 +58,7 @@ const Header = () => {
         </div>
       </div>
       <a href="#contact" className="btn btn-contact">
-        Contact Me
+        {t("header.presentation.btn")}
       </a>{" "}
     </section>
   );

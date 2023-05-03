@@ -144,17 +144,13 @@ const SkillDetails = ({ type }) => {
       return null;
   }
 
-  if (!content1) {
-    return null;
-  }
-
   return (
     <div className="skills-details-box">
       <h3>{title}</h3>
       <div className="details-content">
         {content1 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content1}
           </p>
         ) : (
@@ -162,7 +158,7 @@ const SkillDetails = ({ type }) => {
         )}
         {content2 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content2}
           </p>
         ) : (
@@ -170,7 +166,7 @@ const SkillDetails = ({ type }) => {
         )}
         {content3 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content3}
           </p>
         ) : (
@@ -178,7 +174,7 @@ const SkillDetails = ({ type }) => {
         )}
         {content4 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content4}
           </p>
         ) : (
@@ -186,7 +182,7 @@ const SkillDetails = ({ type }) => {
         )}
         {content5 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content5}
           </p>
         ) : (
@@ -194,7 +190,7 @@ const SkillDetails = ({ type }) => {
         )}
         {content6 ? (
           <p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             {content6}
           </p>
         ) : (

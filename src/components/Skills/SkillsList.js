@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SkillDetails from "./SkillDetails";
 import html from "../../assets/img/html.png";
@@ -9,15 +9,35 @@ import node from "../../assets/img/node.png";
 import mongodb from "../../assets/img/mongodb.png";
 import github from "../../assets/img/github.png";
 import react from "../../assets/img/react.png";
+import { gsap } from "gsap";
 
 const SkillsList = () => {
   // skill navigation management
   const [typeOfSkills, setTypeOfSkills] = useState("hard");
   const [skillSelected, setSkillSelected] = useState("");
+  const [montage, setMontage] = useState(false);
 
   const { t } = useTranslation("en", { useSuspense: false });
 
-  const activeSkill = (e) => {
+  // type of skills management onclick
+  const handleType = (e, type) => {
+    setTypeOfSkills(type);
+    document.querySelectorAll(".type-btn > li").forEach((btn) => {
+      btn.className = "";
+    });
+    document.querySelectorAll(".skills-list-box > ul > li").forEach((btn) => {
+      btn.className = "";
+    });
+    setSkillSelected("");
+    setMontage(false);
+    e.target.className = "active-skills";
+  };
+
+  // skill selected management on click
+  const activeSkill = (e, skill) => {
+    if (skillSelected == "") {
+      setMontage(true);
+    }
     document.querySelectorAll(".skills-list-box > ul > li").forEach((btn) => {
       btn.className = "";
     });
@@ -26,8 +46,115 @@ const SkillsList = () => {
     } else if (e.target.tagName.toLowerCase() === "img") {
       e.target.parentNode.className = "active-skill";
     }
-    console.log(e);
+    setSkillSelected(skill);
   };
+
+  const hardSkills = () => {
+    gsap.timeline().fromTo(
+      ".hard > li",
+      {
+        opacity: 0,
+        x: -200,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+  const softSkills = (elem) => {
+    gsap.timeline().fromTo(
+      ".soft > li",
+      {
+        opacity: 0,
+        x: 200,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+  const details = (elem) => {
+    gsap.timeline().fromTo(
+      ".skills-details-box",
+      {
+        opacity: 0,
+        x: 200,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+  const detailsRes = (elem) => {
+    gsap.timeline().fromTo(
+      ".skills-details-box",
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+  const list = (elem) => {
+    gsap.timeline().fromTo(
+      ".skills-list",
+      {
+        x: 200,
+      },
+      {
+        x: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+  const reverseList = (elem) => {
+    gsap.timeline().fromTo(
+      ".skills-list",
+      {
+        x: -200,
+      },
+      {
+        x: 0,
+        stagger: 0.33,
+        duration: 0.7,
+      }
+    );
+  };
+
+  useEffect(() => {
+    softSkills();
+  }, [typeOfSkills]);
+  useEffect(() => {
+    hardSkills();
+  }, [typeOfSkills]);
+
+  useEffect(() => {
+    if (window.innerWidth > 500) {
+      details();
+      if (montage) {
+        list();
+      } else {
+        reverseList();
+      }
+    } else {
+      detailsRes();
+    }
+  }, [montage]);
   return (
     <div className="skills-box">
       <div className="skills-list">
@@ -35,34 +162,14 @@ const SkillsList = () => {
           <li
             className="active-skills"
             onClick={(e) => {
-              setTypeOfSkills("hard");
-              document.querySelectorAll(".type-btn > li").forEach((btn) => {
-                btn.className = "";
-              });
-              document
-                .querySelectorAll(".skills-list-box > ul > li")
-                .forEach((btn) => {
-                  btn.className = "";
-                });
-              setSkillSelected("");
-              e.target.className = "active-skills";
+              handleType(e, "hard");
             }}
           >
             {t("skills.list.hard")}
           </li>
           <li
             onClick={(e) => {
-              setTypeOfSkills("soft");
-              document.querySelectorAll(".type-btn > li").forEach((btn) => {
-                btn.className = "";
-              });
-              document
-                .querySelectorAll(".skills-list-box > ul > li")
-                .forEach((btn) => {
-                  btn.className = "";
-                });
-              setSkillSelected("");
-              e.target.className = "active-skills";
+              handleType(e, "soft");
             }}
           >
             {t("skills.list.soft")}
@@ -73,8 +180,7 @@ const SkillsList = () => {
             <ul className="hard">
               <li
                 onClick={(e) => {
-                  setSkillSelected("HTML/CSS");
-                  activeSkill(e);
+                  activeSkill(e, "HTML/CSS");
                 }}
               >
                 HTML/CSS
@@ -88,8 +194,7 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("SASS");
-                  activeSkill(e);
+                  activeSkill(e, "SASS");
                 }}
               >
                 SASS
@@ -97,8 +202,7 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Javascript");
-                  activeSkill(e);
+                  activeSkill(e, "Javascript");
                 }}
               >
                 Javascript
@@ -106,8 +210,7 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("React");
-                  activeSkill(e);
+                  activeSkill(e, "React");
                 }}
               >
                 React
@@ -115,8 +218,7 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("NodeJs");
-                  activeSkill(e);
+                  activeSkill(e, "NodeJs");
                 }}
               >
                 NodeJs
@@ -124,8 +226,7 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("MongoDB");
-                  activeSkill(e);
+                  activeSkill(e, "MongoDB");
                 }}
               >
                 MongoDB
@@ -133,16 +234,14 @@ const SkillsList = () => {
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("SEO");
-                  activeSkill(e);
+                  activeSkill(e, "SEO");
                 }}
               >
                 SEO
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("github");
-                  activeSkill(e);
+                  activeSkill(e, "github");
                 }}
               >
                 Github
@@ -153,48 +252,42 @@ const SkillsList = () => {
             <ul className="soft">
               <li
                 onClick={(e) => {
-                  setSkillSelected("Empathie");
-                  activeSkill(e);
+                  activeSkill(e, "Empathie");
                 }}
               >
                 {t("skills.detail.empathie.title")}
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Equipe");
-                  activeSkill(e);
+                  activeSkill(e, "Equipe");
                 }}
               >
                 {t("skills.detail.equipe.title")}
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Pédagogie");
-                  activeSkill(e);
+                  activeSkill(e, "Pédagogie");
                 }}
               >
                 {t("skills.detail.pedagogie.title")}
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Autonomie");
-                  activeSkill(e);
+                  activeSkill(e, "Autonomie");
                 }}
               >
                 {t("skills.detail.autonomie.title")}
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Adaptation");
-                  activeSkill(e);
+                  activeSkill(e, "Adaptation");
                 }}
               >
                 {t("skills.detail.adaptation.title")}
               </li>
               <li
                 onClick={(e) => {
-                  setSkillSelected("Gestion de projet");
-                  activeSkill(e);
+                  activeSkill(e, "Gestion de projet");
                 }}
               >
                 {t("skills.detail.gestion.title")}

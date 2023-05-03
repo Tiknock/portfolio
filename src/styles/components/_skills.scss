@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex; 
     flex-direction: column;
+    overflow: hidden;
     @include nonante;
 
     .skills-container{
@@ -59,6 +60,9 @@
                     padding: 5px;
                     margin: 30px;
                     cursor: pointer;
+                    &:hover {
+                        color: $color-1;
+                    }
 
                     img{
                         transform: translateY(-10%);
@@ -86,7 +90,10 @@
 
                 .active-skill{
                     background: $color-1;
-                    color:$color-3
+                    color:$color-3;
+                    &:hover {
+                        color: $color-3;
+                    }
                 }
             }
         }
@@ -120,9 +127,10 @@
 
                 p{
                     text-align: justify;
-                    margin: 10px;
-                    line-height: 25px;
+                    margin: 8px;
+                    line-height: 35px;
                     @media screen and (max-width: $medium) {
+                        line-height: 25px;
                         margin: 5px;       
                     }
                 }

@@ -52,7 +52,7 @@ const Slider = ({ projects }) => {
         <SwiperSlide key={project.id}>
           <h3>
             {project.title}{" "}
-            <a href={project.code}>
+            <a target="_blank" href={project.code}>
               <i className="fa-brands fa-github"></i>
             </a>
           </h3>
