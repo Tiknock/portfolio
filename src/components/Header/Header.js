@@ -3,8 +3,6 @@ import AnimHeader from "./AnimHeader";
 import { useTranslation } from "react-i18next";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollPlugin } from "gsap/ScrollToPlugin";
 
 const Header = () => {
   // use of useTranslation

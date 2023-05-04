@@ -35,7 +35,6 @@ const Slider = ({ projects }) => {
       return 2;
     }
   };
-  console.log(projects);
   return (
     <Swiper
       // install Swiper modules
@@ -52,7 +51,7 @@ const Slider = ({ projects }) => {
         <SwiperSlide key={project.id}>
           <h3>
             {project.title}{" "}
-            <a target="_blank" href={project.code}>
+            <a target="_blank" rel="noreferrer" href={project.code}>
               <i className="fa-brands fa-github"></i>
             </a>
           </h3>

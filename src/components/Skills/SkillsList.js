@@ -35,7 +35,7 @@ const SkillsList = () => {
 
   // skill selected management on click
   const activeSkill = (e, skill) => {
-    if (skillSelected == "") {
+    if (skillSelected === "") {
       setMontage(true);
     }
     document.querySelectorAll(".skills-list-box > ul > li").forEach((btn) => {

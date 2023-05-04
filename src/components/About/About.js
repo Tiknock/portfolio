@@ -5,7 +5,6 @@ import Presentation from "./Presentation";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollPlugin } from "gsap/ScrollToPlugin";
 
 const About = () => {
   const { t } = useTranslation("en", { useSuspense: false });
@@ -31,9 +30,32 @@ const About = () => {
       }
     );
   };
+  const photoEffect = (elem, delay, duration) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0.2,
+      },
+      {
+        opacity: 1,
+        delay: delay || 0.2,
+        duration: duration || 0.6,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top center",
+          end: "bottom center",
+        },
+      }
+    );
+  };
 
   useEffect(() => {
     slideInTop("#about > h2");
+  }, []);
+  useEffect(() => {
+    photoEffect("#about-photo");
   }, []);
 
   return (
@@ -41,7 +63,12 @@ const About = () => {
       <h2>{t("about.title")}</h2>
       <div className="presentation-container">
         <div className="presentation-pic">
-          <img src={Pdp} alt="Lolita Danancher" width="400px" />
+          <img
+            id="about-photo"
+            src={Pdp}
+            alt="Lolita Danancher"
+            width="400px"
+          />
         </div>
         <Presentation />
       </div>

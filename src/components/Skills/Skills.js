@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollPlugin } from "gsap/ScrollToPlugin";
+
 const Skills = () => {
   const { t } = useTranslation("en", { useSuspense: false });
 

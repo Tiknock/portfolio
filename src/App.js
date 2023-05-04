@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 // import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -17,7 +17,7 @@ i18n
     backend: {
       loadPath: "/translations/{{lng}}/translations.json",
     },
-    lng: "en",
+    lng: localStorage.getItem("language"),
     fallbackLng: "en",
   });
 

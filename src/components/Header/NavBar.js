@@ -14,7 +14,8 @@ const NavBar = () => {
 
   const handleLangChange = (e) => {
     // console.log(e.target.value);
-    i18n.changeLanguage(e.target.value);
+    localStorage.setItem("language", e.target.value);
+    i18n.changeLanguage(localStorage.getItem("language"));
   };
   return (
     <ul className="nav-bar menu-items">
@@ -44,12 +45,21 @@ const NavBar = () => {
         </a>
       </li>
       <li>
-        <select className="language-selector" onChange={handleLangChange}>
-          <option value="en" defaultValue>
-            EN
-          </option>
-          <option value="fr">FR</option>
-        </select>
+        {i18n.language === "en" ? (
+          <select className="language-selector" onChange={handleLangChange}>
+            <option value="en" defaultValue>
+              EN
+            </option>
+            <option value="fr">FR</option>
+          </select>
+        ) : (
+          <select className="language-selector" onChange={handleLangChange}>
+            <option value="fr" defaultValue>
+              FR
+            </option>
+            ;<option value="en">EN</option>
+          </select>
+        )}
       </li>
     </ul>
   );
