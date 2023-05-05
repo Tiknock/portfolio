@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 init(process.env.ID);
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation("en", { useSuspense: false });
+  const { t } = useTranslation("en", { useSuspense: false });
 
   const slideInTop = (elem, delay, duration) => {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,15 +37,6 @@ const ContactForm = () => {
   useEffect(() => {
     slideInTop("#contact > h2");
   }, []);
-
-  // language for "send" button
-  const handleValue = () => {
-    if (i18n.language === "fr") {
-      return "Envoyer";
-    } else if (i18n.language === "en") {
-      return "Send";
-    }
-  };
 
   // management of the contact form with EmailJs
   const form = useRef();
@@ -108,7 +99,7 @@ const ContactForm = () => {
         <label htmlFor="mess">Message</label>
         <textarea name="message" id="mess" />
         <button type="submit" className="btn button">
-          {handleValue()}
+          {t("contact.send")}
         </button>
       </form>
       <div className="form-message"></div>

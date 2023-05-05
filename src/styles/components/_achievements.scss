@@ -60,6 +60,9 @@
                 border-radius: 15px;
             }
         }
+        a {
+            color: $color-3;
+        }
         img{
             cursor: pointer;
             max-width: 100%;
@@ -78,6 +81,7 @@
             }
         }
         p {
+            cursor: pointer;
             padding: 10px 20px;
             border-radius: 5px;
             background: #ffffff5c;

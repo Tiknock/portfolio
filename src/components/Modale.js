@@ -59,17 +59,17 @@ const Modale = () => {
           </p>
           <h3>Edition du site</h3>
           <p>
-            Le présent site, accessible à l’URL http://lolitadanancher.com (le
-            Site »), est édité par :
+            Le présent site, accessible à l’URL https://lolitadanancher.com («
+            le Site »), est édité par :
           </p>
           <p>
-            Lolita Danancher, résidant 1 Chemin de la Creuse 42660 Le Bessat, de
-            nationalité Française (France), née le 23/08/1995,
+            Lolita Danancher, résidant en Rhône-Alpes, de nationalité Française
+            (France), née le 23/08/1995,
           </p>
           <h3>Hébergement</h3>
           <p>
-            Le site est hébergé par la Société Infomaniak, rue Eugène-Marziano
-            25, 1227 Genève, Suisse (contact téléphonique : +41 22 820 35 44.).
+            Le site est hébergé par la société Ionos, 1&1 Internet SARL 1&1, 7,
+            place de la Gare, BP 70109, 57200 Sarreguemines Cedex.
           </p>
           <h3>Directrice de publication</h3>
           <p>La Directrice de la publication du Site est Lolita Danancher.</p>

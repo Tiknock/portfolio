@@ -140,7 +140,7 @@
       "achievements":"Achievements",
       "contact": {
         "name": "Name",
-        "sen": "Send"
+        "send": "Send"
       },
       "footer":{
         "1":"Web developer, creation of website,...",

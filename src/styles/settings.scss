@@ -141,22 +141,24 @@ $mobile:500px;
       }
     }
   }
-  .down-icon {
-    position: fixed;
-
-    a{
-      color: $color-1;
+  
+  #downbtn{
+    color: $color-1;
+    i {
       animation:vertical 3s ease infinite;
+    }
+    .down-icon {
+      position: fixed;
       
     }
   }
-  .up-icon {
-    position: fixed;
-    background-color: $color-1;
   
-    a{
-      color: $color-3;
-
+  #upbtn{
+    color: $color-3;
+    .up-icon {
+      position: fixed;
+      background-color: $color-1;
+    
     }
   }
 

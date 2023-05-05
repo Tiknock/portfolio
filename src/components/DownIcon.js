@@ -18,17 +18,17 @@ const DownIcon = () => {
   return (
     <div>
       {isHeaderVisible ? (
-        <div className="down-up-icon down-icon">
-          <a href="#about">
+        <a id="downbtn" href="#about">
+          <div className="down-up-icon down-icon">
             <i className="fa-solid fa-arrow-down"></i>
-          </a>
-        </div>
+          </div>
+        </a>
       ) : (
-        <div className="down-up-icon up-icon">
-          <a href="#home">
+        <a id="upbtn" href="#home">
+          <div className="down-up-icon up-icon">
             <i className="fa-solid fa-arrow-up"></i>
-          </a>
-        </div>
+          </div>
+        </a>
       )}
     </div>
   );

@@ -16,6 +16,15 @@ const Slider = ({ projects }) => {
   const { i18n } = useTranslation("en", { useSuspense: false });
   const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
 
+  const projectLanguage = (project) => {
+    if (localStorage.getItem("language") === "fr") {
+      return <p>{project.descriptionFr}</p>;
+    } else if (localStorage.getItem("language") === "en") {
+      return <p>{project.descriptionEn}</p>;
+    } else {
+      return <p>{project.descriptionEn}</p>;
+    }
+  };
   useEffect(() => {
     // screen size management
     function handleResize() {
@@ -63,14 +72,13 @@ const Slider = ({ projects }) => {
           {project.url ? (
             <a href={project.url} target="_blank" rel="noreferrer">
               <img src={project.img} alt={project.title} />
+              {projectLanguage(project)}
             </a>
           ) : (
-            <ModaleVideo project={project} />
-          )}
-          {i18n.language === "fr" ? (
-            <p>{project.descriptionFr}</p>
-          ) : (
-            <p>{project.descriptionEn}</p>
+            <ModaleVideo
+              project={project}
+              projectLanguage={projectLanguage(project)}
+            />
           )}
         </SwiperSlide>
       ))}

@@ -2,7 +2,7 @@
     {
         "id":1,
         "title":"La Montagne",
-        "img":"http://localhost:3000/images/montagneT.webp",
+        "img":"https://lolitadanancher.com/images/montagneT.webp",
         "url":"https://tiknock.github.io/la-montagne/",
         "code":"https://github.com/Tiknock/la-montagne",
         "technos":[
@@ -15,7 +15,7 @@
     {
         "id":2,
         "title":"Le Resto",
-        "img":"http://localhost:3000/images/restoT.webp",
+        "img":"https://lolitadanancher.com/images/restoT.webp",
         "url":"https://tiknock.github.io/the-resto/",
         "code":"https://github.com/Tiknock/the-resto",
         "technos":[
@@ -28,8 +28,9 @@
     {
         "id":3,
         "title":"Sophie Bluel",
-        "img":"http://localhost:3000/images/sophie-bluel.webp",
-        "video":"http://localhost:3000/video/sophiebluel.webm",
+        "img":"https://lolitadanancher.com/images/sophie-bluel.webp",
+        "videomp4":"https://lolitadanancher.com/video/sophiebluel.mp4",
+        "videowebm":"https://lolitadanancher.com/video/sophiebluel.webm",
         "code":"https://github.com/Tiknock/SophieBluel",
         "technos":[
             "CSS",
@@ -41,8 +42,9 @@
     {
         "id":4,
         "title":"Kasa",
-        "img":"http://localhost:3000/images/kasaT.webp",
-        "video":"http://localhost:3000/video/kasa.webm",
+        "img":"https://lolitadanancher.com/images/kasaT.webp",
+        "videomp4":"https://lolitadanancher.com/video/kasa.mp4",
+        "videowebm":"https://lolitadanancher.com/video/kasa.webm",
         "code":"https://github.com/Tiknock/kasa",
         "technos":[
             "SASS",
@@ -54,7 +56,7 @@
     {
         "id":5,
         "title":"Crypto-Watch",
-        "img":"http://localhost:3000/images/cryptowatchT.webp",
+        "img":"https://lolitadanancher.com/images/cryptowatchT.webp",
         "url":"https://watchcryptold.netlify.app/",
         "code":"https://github.com/Tiknock/Crypto-Watch",
         "technos":[
@@ -67,8 +69,9 @@
     {
         "id":6,
         "title":"Mon Vieux Grimoire",
-        "img":"http://localhost:3000/images/mvgT.webp",
-        "video":"http://localhost:3000/video/mvg.webm",
+        "img":"https://lolitadanancher.com/images/mvgT.webp",
+        "videomp4":"https://lolitadanancher.com/video/mvg.mp4",
+        "videowebm":"https://lolitadanancher.com/video/mvg.webm",
         "code":"https://github.com/Tiknock/mon-vieux-grimoire",
         "technos":[
             "NodeJs",
@@ -81,7 +84,7 @@
     {
         "id":7,
         "title":"Playlist",
-        "img":"http://localhost:3000/images/playlistT.webp",
+        "img":"https://lolitadanancher.com/images/playlistT.webp",
         "url":"https://tiknock.github.io/Playlist/",
         "code":"https://github.com/Tiknock/Playlist",
         "technos":[
@@ -95,7 +98,7 @@
     {
         "id":8,
         "title":"Jokes",
-        "img":"http://localhost:3000/images/jokesT.webp",
+        "img":"https://lolitadanancher.com/images/jokesT.webp",
         "url":"https://tiknock.github.io/joke/",
         "code":"https://github.com/Tiknock/joke",
         "technos":[
@@ -109,7 +112,7 @@
     {
         "id":9,
         "title":"Jeu de bulles",
-        "img":"http://localhost:3000/images/bubble.webp",
+        "img":"https://lolitadanancher.com/images/bubble.webp",
         "url":"https://tiknock.github.io/jeu-bulles/",
         "code":"https://github.com/Tiknock/jeu-bulles",
         "technos":[

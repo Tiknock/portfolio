@@ -12,7 +12,7 @@ const customStyles = {
   },
 };
 
-const ModaleVideo = ({ project }) => {
+const ModaleVideo = ({ project, projectLanguage }) => {
   // if the project has no url, a modal opens with a demo video of the site
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -31,7 +31,10 @@ const ModaleVideo = ({ project }) => {
   }
   return (
     <div>
-      <img src={project.img} alt={project.title} onClick={openModal} />
+      <div onClick={openModal}>
+        <img src={project.img} alt={project.title} />
+        {projectLanguage}
+      </div>
       <div>
         <Modal
           isOpen={modalIsOpen}
@@ -44,7 +47,10 @@ const ModaleVideo = ({ project }) => {
             <h4 ref={(_subtitle) => (subtitle = _subtitle)}>
               Vidéo du projet : {project.title}
             </h4>
-            <video src={project.video} width="500px" controls></video>
+            <video width="500px" controls preload="auto" data-setup="{}">
+              <source src={project.videomp4} type="video/mp4" />
+              <source src={project.videowebm} type="video/webm" />
+            </video>
             <button onClick={closeModal}>
               <i className="fa-regular fa-circle-xmark"></i>
             </button>

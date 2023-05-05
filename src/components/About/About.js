@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Pdp from "../../assets/img/Lolita_Danancher4.png";
+// import Pdp from "../../assets/img/Lolita_Danancher4.png";
+import Pdp from "../../assets/img/Lolita_Danancher2.webp";
 import Presentation from "./Presentation";
 
 import { gsap } from "gsap";
@@ -36,12 +37,12 @@ const About = () => {
     gsap.fromTo(
       elem,
       {
-        opacity: 0.2,
+        opacity: 0.1,
       },
       {
         opacity: 1,
-        delay: delay || 0.2,
-        duration: duration || 0.6,
+        delay: delay || 0.1,
+        duration: duration || 0.4,
         scrollTrigger: {
           trigger: elem,
           start: "top center",
