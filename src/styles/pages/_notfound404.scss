@@ -17,6 +17,10 @@
             font-size: 8rem;
             font-weight: bolder;
             margin: 0;
+
+            &::after {
+                display: none;
+            }
         }
     }
 }

@@ -8,22 +8,22 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useTranslation } from "react-i18next";
 import ModaleVideo from "./ModaleVideo";
 
 const Slider = ({ projects }) => {
   // carousel to display projects
-  const { i18n } = useTranslation("en", { useSuspense: false });
   const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
 
   const projectLanguage = (project) => {
-    if (localStorage.getItem("language") === "fr") {
-      return <p>{project.descriptionFr}</p>;
-    } else if (localStorage.getItem("language") === "en") {
-      return <p>{project.descriptionEn}</p>;
-    } else {
-      return <p>{project.descriptionEn}</p>;
+    if (localStorage.getItem("i18nextLng")) {
+      if (localStorage.getItem("i18nextLng") === "fr-FR") {
+        return <p>{project.descriptionFr}</p>;
+      } else if (localStorage.getItem("i18nextLng") === "en-EN") {
+        return <p>{project.descriptionEn}</p>;
+      }
     }
+
+    return <p>{project.descriptionEn}</p>;
   };
   useEffect(() => {
     // screen size management

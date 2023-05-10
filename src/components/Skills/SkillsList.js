@@ -50,90 +50,113 @@ const SkillsList = () => {
   };
 
   const hardSkills = () => {
-    gsap.timeline().fromTo(
-      ".hard > li",
-      {
-        opacity: 0,
-        x: -200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+    const elements = document.querySelectorAll(".hard > li");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          opacity: 0,
+          x: -200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
-  const softSkills = (elem) => {
-    gsap.timeline().fromTo(
-      ".soft > li",
-      {
-        opacity: 0,
-        x: 200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+
+  const softSkills = () => {
+    const elements = document.querySelectorAll(".soft > li");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
-  const details = (elem) => {
-    gsap.timeline().fromTo(
-      ".skills-details-box",
-      {
-        opacity: 0,
-        x: 200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+
+  const details = () => {
+    const elements = document.querySelectorAll(".skills-details-box");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
-  const detailsRes = (elem) => {
-    gsap.timeline().fromTo(
-      ".skills-details-box",
-      {
-        opacity: 0,
-        y: -200,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+
+  const detailsRes = () => {
+    const elements = document.querySelectorAll(".skills-details-box");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          opacity: 0,
+          y: -200,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
-  const list = (elem) => {
-    gsap.timeline().fromTo(
-      ".skills-list",
-      {
-        x: 200,
-      },
-      {
-        x: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+
+  const list = () => {
+    const elements = document.querySelectorAll(".skills-list");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          x: 200,
+        },
+        {
+          x: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
-  const reverseList = (elem) => {
-    gsap.timeline().fromTo(
-      ".skills-list",
-      {
-        x: -200,
-      },
-      {
-        x: 0,
-        stagger: 0.33,
-        duration: 0.7,
-      }
-    );
+
+  const reverseList = () => {
+    const elements = document.querySelectorAll(".skills-list");
+    if (elements.length > 0) {
+      gsap.timeline().fromTo(
+        elements,
+        {
+          x: -200,
+        },
+        {
+          x: 0,
+          stagger: 0.33,
+          duration: 0.7,
+        }
+      );
+    }
   };
 
   useEffect(() => {

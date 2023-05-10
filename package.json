@@ -1,6 +1,12 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -49,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
     "svg-inline-loader": "^0.8.2"
   }
 }

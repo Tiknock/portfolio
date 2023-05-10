@@ -1,5 +1,4 @@
 import React from "react";
-// import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -16,6 +15,7 @@ i18n
   .init({
     backend: {
       loadPath: "/translations/{{lng}}/translations.json",
+      crossDomain: true,
     },
     lng: localStorage.getItem("language"),
     fallbackLng: "en",
@@ -27,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/defaultsite" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
