@@ -27,7 +27,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/defaultsite" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

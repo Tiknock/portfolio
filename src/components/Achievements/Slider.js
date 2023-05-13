@@ -15,15 +15,24 @@ const Slider = ({ projects }) => {
   const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
 
   const projectLanguage = (project) => {
-    if (localStorage.getItem("i18nextLng")) {
-      if (localStorage.getItem("i18nextLng") === "fr-FR") {
+    if (
+      localStorage.getItem("i18nextLng") ||
+      localStorage.getItem("language")
+    ) {
+      if (
+        localStorage.getItem("i18nextLng") === "fr-FR" ||
+        localStorage.getItem("language") === "fr"
+      ) {
         return <p>{project.descriptionFr}</p>;
-      } else if (localStorage.getItem("i18nextLng") === "en-EN") {
+      } else if (
+        localStorage.getItem("i18nextLng") === "en-EN" ||
+        localStorage.getItem("language") === "en"
+      ) {
         return <p>{project.descriptionEn}</p>;
       }
+    } else {
+      return <p>{project.descriptionEn}</p>;
     }
-
-    return <p>{project.descriptionEn}</p>;
   };
   useEffect(() => {
     // screen size management
@@ -70,10 +79,12 @@ const Slider = ({ projects }) => {
             ))}
           </ul>
           {project.url ? (
-            <a href={project.url} target="_blank" rel="noreferrer">
-              <img src={project.img} alt={project.title} />
-              {projectLanguage(project)}
-            </a>
+            <div className="project-box">
+              <a href={project.url} target="_blank" rel="noreferrer">
+                <img src={project.img} alt={project.title} />
+                {projectLanguage(project)}
+              </a>
+            </div>
           ) : (
             <ModaleVideo
               project={project}

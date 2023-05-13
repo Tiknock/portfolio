@@ -36,7 +36,7 @@ const Header = () => {
     displayIndic();
   }, []);
   return (
-    <section className="presentation-section">
+    <section className="presentation-section" id="home">
       <div className="presentation-container">
         <div className="presentation-left-box">
           <h1>

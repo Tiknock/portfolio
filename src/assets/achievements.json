@@ -15,7 +15,7 @@
     {
         "id":2,
         "title":"Le Resto",
-        "img":"https://lolitadanancher.com/images/restoT.webp",
+        "img":"https://lolitadanancher.com/images/restoT.png",
         "url":"https://tiknock.github.io/the-resto/",
         "code":"https://github.com/Tiknock/the-resto",
         "technos":[

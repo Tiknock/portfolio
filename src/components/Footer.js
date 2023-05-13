@@ -24,10 +24,10 @@ const Footer = () => {
           <p>{t("footer.1")}</p>
           <ul>
             <li>
-              <a href="#home">{t("footer.2")}</a>
+              <a href="https://lolitadanancher.com/#home">{t("footer.2")}</a>
             </li>
             <li>
-              <a href="#achievements">Portfolio</a>
+              <a href="https://lolitadanancher.com/#achievements">Portfolio</a>
             </li>
             <Modale />
           </ul>

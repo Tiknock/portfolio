@@ -30,8 +30,8 @@ const ModaleVideo = ({ project, projectLanguage }) => {
     setIsOpen(false);
   }
   return (
-    <div>
-      <div onClick={openModal}>
+    <div className="modale-project-box">
+      <div onClick={openModal} className="project-box">
         <img src={project.img} alt={project.title} />
         {projectLanguage}
       </div>
