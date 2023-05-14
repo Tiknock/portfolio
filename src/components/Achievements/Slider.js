@@ -9,33 +9,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ModaleVideo from "./ModaleVideo";
+import { useTranslation } from "react-i18next";
 
 const Slider = ({ projects }) => {
-  // carousel to display projects
-  const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
+  const { t } = useTranslation("en", { useSuspense: false });
 
-  const projectLanguage = (project) => {
-    if (
-      localStorage.getItem("i18nextLng") ||
-      localStorage.getItem("language")
-    ) {
-      if (
-        localStorage.getItem("i18nextLng") === "fr-FR" ||
-        localStorage.getItem("language") === "fr"
-      ) {
-        return <p>{project.descriptionFr}</p>;
-      } else if (
-        localStorage.getItem("i18nextLng") === "en-EN" ||
-        localStorage.getItem("language") === "en"
-      ) {
-        return <p>{project.descriptionEn}</p>;
-      }
-    } else {
-      return <p>{project.descriptionEn}</p>;
-    }
-  };
+  const [isWindowSmall, setIsWindowSmall] = useState(window.innerWidth < 768);
+  const [projectDescription, setProjectDescription] = useState("");
+
   useEffect(() => {
-    // screen size management
     function handleResize() {
       setIsWindowSmall(window.innerWidth < 1000);
     }
@@ -46,16 +28,22 @@ const Slider = ({ projects }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const setSlidesPerview = () => {
-    if (isWindowSmall) {
-      return 1;
+
+  useEffect(() => {
+    const projH3 = document.querySelector("#achievements > h2").textContent;
+    if (projH3 === "Achievements") {
+      setProjectDescription("descriptionEn");
     } else {
-      return 2;
+      setProjectDescription("descriptionFr");
     }
+  }, [t]);
+
+  const setSlidesPerview = () => {
+    return isWindowSmall ? 1 : 2;
   };
+
   return (
     <Swiper
-      // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={100}
       slidesPerView={setSlidesPerview()}
@@ -82,13 +70,13 @@ const Slider = ({ projects }) => {
             <div className="project-box">
               <a href={project.url} target="_blank" rel="noreferrer">
                 <img src={project.img} alt={project.title} />
-                {projectLanguage(project)}
+                <p>{project[projectDescription]}</p>
               </a>
             </div>
           ) : (
             <ModaleVideo
               project={project}
-              projectLanguage={projectLanguage(project)}
+              projectLanguage={project[projectDescription]}
             />
           )}
         </SwiperSlide>
