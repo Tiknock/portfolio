@@ -33,7 +33,7 @@ const ModaleVideo = ({ project, projectLanguage }) => {
     <div className="modale-project-box">
       <div onClick={openModal} className="project-box">
         <img src={project.img} alt={project.title} />
-        {projectLanguage}
+        <p>{projectLanguage}</p>
       </div>
       <div>
         <Modal
